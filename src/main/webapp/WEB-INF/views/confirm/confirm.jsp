@@ -1,0 +1,23 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Nastya
+  Date: 20.10.2018
+  Time: 23:42
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page pageEncoding="UTF-8"%>
+<%--<%request.setCharacterEncoding("UTF-8");%>--%>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
+<html>
+<head>
+    <title>Подтверждение email</title>
+</head>
+<body>
+<p> Ваш email успешно подтвержден</p>
+<p>Теперь вы можете зайти в систему</p>
+<h4 ><a href="${contextPath}/login">Войти</a></h4>
+
+</body>
+</html>

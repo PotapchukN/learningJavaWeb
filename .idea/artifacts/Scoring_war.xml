@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Scoring:war">
+    <output-path>$PROJECT_DIR$/../Scoring/target</output-path>
+    <root id="archive" name="Task_Manager.war">
+      <element id="artifact" artifact-name="Scoring:war exploded" />
+    </root>
+  </artifact>
+</component>
