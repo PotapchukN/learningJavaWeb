@@ -61,7 +61,7 @@ public class StatisticController {
         List<UserMoney> l= userMoneyService.listUserMoney();
         List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
 
-        Map<String,Integer> attr = diagramInfo.circleDiagramm( l, listAnswers);
+        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
         model.addAllAttributes(attr);
         return "/admin/statistic";
     }
@@ -86,7 +86,7 @@ public class StatisticController {
         List<UserMoney> l= userMoneyService.listUserMoney();
         List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
 
-        Map<String,Integer> attr = diagramInfo.circleDiagramm( l, listAnswers);
+        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
         model.addAllAttributes(attr);
 
         return "/admin/statistic";
@@ -112,7 +112,7 @@ public class StatisticController {
         List<UserMoney> l= userMoneyService.listUserMoney();
         List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
 
-        Map<String,Integer> attr = diagramInfo.circleDiagramm( l, listAnswers);
+        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
         model.addAllAttributes(attr);
         return "/admin/statistic";
     }
@@ -137,7 +137,7 @@ public class StatisticController {
         List<UserMoney> l= userMoneyService.listUserMoney();
         List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
 
-        Map<String,Integer> attr = diagramInfo.circleDiagramm( l, listAnswers);
+        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
         model.addAllAttributes(attr);
         return "/admin/statistic";
     }
@@ -167,7 +167,7 @@ public class StatisticController {
         List<UserMoney> l= userMoneyService.listUserMoney();
         List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
 
-        Map<String,Integer> attr = diagramInfo.circleDiagramm( l, listAnswers);
+        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
         model.addAllAttributes(attr);
         return "/admin/statistic";
     }
@@ -194,7 +194,7 @@ public class StatisticController {
         List<UserMoney> l= userMoneyService.listUserMoney();
         List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
 
-        Map<String,Integer> attr = diagramInfo.circleDiagramm( l, listAnswers);
+        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
         model.addAllAttributes(attr);
 
         model.addAttribute("listAverageUsers", listAverageUsers);
@@ -228,7 +228,7 @@ public class StatisticController {
         List<UserMoney> l= userMoneyService.listUserMoney();
         List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
 
-        Map<String,Integer> attr = diagramInfo.circleDiagramm( l, listAnswers);
+        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
         model.addAllAttributes(attr);
         model.addAttribute("isAdmin", true);
         model.addAttribute("isLogin", false);
@@ -307,7 +307,7 @@ public class StatisticController {
         List<UserMoney> l= userMoneyService.listUserMoney();
         List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
 
-        Map<String,Integer> attr = diagramInfo.circleDiagramm( l, listAnswers);
+        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
         model.addAllAttributes(attr);
 
 
@@ -335,7 +335,7 @@ public class StatisticController {
         List<UserMoney> l= userMoneyService.listUserMoney();
         List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
 
-        Map<String,Integer> attr = diagramInfo.circleDiagramm( l, listAnswers);
+        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
         model.addAllAttributes(attr);
 
         return "/admin/statistic";

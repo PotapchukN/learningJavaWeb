@@ -2,7 +2,6 @@ package by.scoring.controller.diagramInfo;
 
 import by.scoring.model.entity.UserAnswers;
 import by.scoring.model.entity.UserMoney;
-import org.springframework.ui.Model;
 
 import java.util.*;
 
@@ -13,9 +12,9 @@ public class DiagramInfo {
     public static final int averageScore = 1150;
 
     /** Информация для построения статистики */
-    public Map<String, Integer> circleDiagramm( List<UserMoney> listMoney, List<UserAnswers> listAnswers) {
+    public Map<String, Integer> makeDiagramms( List<UserMoney> listMoney, List<UserAnswers> listAnswers) {
 
-//       <------------------------------FOR---------Donut------------------------->
+//       <------------------------------For-Donut------------------------->
         int redRisk = 0;
         int averageRisk = 0;
         int greenRisk = 0;
@@ -32,7 +31,7 @@ public class DiagramInfo {
             }
         }
 
-//       <--------------------------------FOR-------Bar------------------------->
+//       <--------------------------------For-Bar------------------------->
 
         //<---------factors---------------------->
         List<String> factors = new ArrayList<>();
@@ -45,53 +44,51 @@ public class DiagramInfo {
                 education = 0, kindOfActivity = 0, skillLevel = 0, experience = 0,
                 credit = 0, flat = 0;
 
-        for (String x : factors) {
-            if (x.equals("Возраст: менее 20 и более 60 лет считается рискованным возрастом для банка")) {
+        for (String risk_factor : factors) {
+            if (risk_factor.equals(Risk.AGE.getRisk_factor())) {
                 age++;
             }
-            if (x.equals("Отсутствие гражданства Республики Беларусь")) {
+            if (risk_factor.equals(Risk.CITIZENSHIP.getRisk_factor())) {
                 citizenship++;
             }
-            if (x.equals("Отсутствие прописки")) {
+            if (risk_factor.equals(Risk.REGISTRATION.getRisk_factor())) {
                 registration++;
             }
-            if (x.equals("Проживание в съемном жилье негативно влияет на кредитный рейтинг, т.к. значительная часть вашего дохода уходит на оплату аренды. " +
-                    "Когда у заемщика нет собственного жилья, лучшим вариантом считается проживание у родственников.")) {
+            if (risk_factor.equals(Risk.HOUSING.getRisk_factor())){
                 housing++;
             }
-            if (x.equals("Семейное положение: как правило семейные люди более ответственно подходят к" +
-                    "формированию бюджета ")) {
+            if (risk_factor.equals(Risk.SP.getRisk_factor())) {
                 sp++;
             }
-            if (x.equals("Отсрочка: негативно влияет на результат анкеты")) {
+            if (risk_factor.equals(Risk.ARMY.getRisk_factor())) {
                 army++;
             }
 
-            if (x.equals("Уровень образования")) {
+            if (risk_factor.equals(Risk.EDUCATION.getRisk_factor())) {
                 education++;
             }
 
-            if (x.equals("Род деятельности")) {
+            if (risk_factor.equals(Risk.KIND_OF_ACTIVITY.getRisk_factor())) {
                 kindOfActivity++;
             }
 
-            if (x.equals("Отсутствие квалификации")) {
+            if (risk_factor.equals(Risk.SKILL_LEVEL.getRisk_factor())) {
                 skillLevel++;
             }
 
-            if (x.equals("Стаж на текущем месте работы: небольшой стаж несколько снижает Вашу привлекательность в качестве заемщика для банка")) {
+            if (risk_factor.equals(Risk.EXPERIENCE.getRisk_factor())) {
                 experience++;
             }
 
-            if (x.equals("Наличие кредита")) {
+            if (risk_factor.equals(Risk.CREDIT.getRisk_factor())) {
                 credit++;
             }
 
-            if (x.equals("Отсутствие недвижимого имущества несколько снижает итоговый результат")) {
+            if (risk_factor.equals(Risk.FLAT.getRisk_factor())) {
                 flat++;
             }
         }
-        Map<String, Integer> attr = new HashMap<String, Integer>();
+        Map<String, Integer> attr = new HashMap<>();
         attr.put("age",age);
         attr.put("citizenship", citizenship);
         attr.put("registration", registration);
