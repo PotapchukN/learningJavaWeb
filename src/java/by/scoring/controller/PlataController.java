@@ -1,6 +1,5 @@
 package by.scoring.controller;
 
-import by.scoring.model.entity.Answers;
 import by.scoring.model.entity.CreditInfo;
 import by.scoring.model.entity.UserAnswers;
 import by.scoring.model.entity.UserMoney;
@@ -13,12 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.validation.constraints.Null;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-import static by.scoring.controller.MainFunctions.minScore;
+import static by.scoring.controller.diagramInfo.DiagramInfo.minScore;
 
 @Controller
 public class PlataController {

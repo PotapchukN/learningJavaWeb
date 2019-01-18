@@ -1,6 +1,5 @@
 package by.scoring.controller;
 
-import by.scoring.model.entity.Answers;
 import by.scoring.model.entity.UserAnswers;
 import by.scoring.model.entity.UserMoney;
 import by.scoring.model.service.*;
@@ -11,14 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.validation.constraints.Null;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static by.scoring.controller.MainFunctions.averageScore;
-import static by.scoring.controller.MainFunctions.maxScore;
-import static by.scoring.controller.MainFunctions.minScore;
+import static by.scoring.controller.diagramInfo.DiagramInfo.averageScore;
+import static by.scoring.controller.diagramInfo.DiagramInfo.maxScore;
+import static by.scoring.controller.diagramInfo.DiagramInfo.minScore;
 
 @Controller
 public class RatingController {
