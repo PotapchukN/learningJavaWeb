@@ -8,6 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b88c003b-33ec-4fb4-93cf-1d4fbc498057" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Scoring/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/CallController.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/CallController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/PlataController.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/PlataController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/RatingController.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/RatingController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/StatisticController.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/StatisticController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/diagramInfo/DiagramInfo.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/diagramInfo/DiagramInfo.java" />
     </list>
@@ -83,7 +86,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Risk.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Risk.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/diagramInfo/Risk.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -103,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatisticController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StatisticController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/StatisticController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1004">
-              <caret line="63" column="47" lean-forward="false" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
+            <state relative-caret-position="-2560">
+              <caret line="145" column="13" lean-forward="true" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,8 +121,8 @@
       <file leaf-file-name="DiagramInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/diagramInfo/DiagramInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+            <state relative-caret-position="531">
+              <caret line="107" column="43" lean-forward="false" selection-start-line="107" selection-start-column="43" selection-end-line="107" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,8 +133,8 @@
       <file leaf-file-name="RatingController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/RatingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4896">
-              <caret line="304" column="28" lean-forward="false" selection-start-line="304" selection-start-column="28" selection-end-line="304" selection-end-column="28" />
+            <state relative-caret-position="-25">
+              <caret line="300" column="44" lean-forward="true" selection-start-line="300" selection-start-column="44" selection-end-line="300" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -140,7 +143,7 @@
       <file leaf-file-name="ScoringController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/ScoringController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="287">
               <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
               <folding />
             </state>
@@ -150,8 +153,8 @@
       <file leaf-file-name="CallController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/CallController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+            <state relative-caret-position="-625">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,8 +163,8 @@
       <file leaf-file-name="PlataController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/PlataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+            <state relative-caret-position="508">
+              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -182,7 +185,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>wid</find>
       <find>.mrs</find>
       <find>.row</find>
       <find>-cont</find>
@@ -212,6 +214,7 @@
       <find>.bor</find>
       <find>span</find>
       <find>circleDiagramm</find>
+      <find>attr</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -252,10 +255,8 @@
         <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/service/ICallService.java" />
         <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/service/impl/CallsServiceImpl.java" />
         <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/Calls.java" />
-        <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/CallController.java" />
         <option value="$PROJECT_DIR$/../Scoring/src/main/webapp/WEB-INF/views/login/login.jsp" />
         <option value="$PROJECT_DIR$/../Scoring/src/main/webapp/WEB-INF/views/registration/registration.jsp" />
-        <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/RatingController.java" />
         <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/ScoringController.java" />
         <option value="$PROJECT_DIR$/../Scoring/src/main/webapp/WEB-INF/views/solvency/solvency.jsp" />
         <option value="$PROJECT_DIR$/../Scoring/src/main/webapp/WEB-INF/views/footer/footer.jsp" />
@@ -274,12 +275,14 @@
         <option value="$PROJECT_DIR$/../Scoring/src/main/webapp/resources/css/style.css" />
         <option value="$PROJECT_DIR$/../Scoring/src/main/webapp/WEB-INF/views/bids/bids.jsp" />
         <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/UserBidsController.java" />
-        <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/PlataController.java" />
         <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/MainFunctions.java" />
         <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/diagramInfo/MainFunctions.java" />
-        <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/StatisticController.java" />
         <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/diagramInfo/Risk.java" />
+        <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/CallController.java" />
+        <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/PlataController.java" />
+        <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/RatingController.java" />
         <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/diagramInfo/DiagramInfo.java" />
+        <option value="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/StatisticController.java" />
       </list>
     </option>
   </component>
@@ -740,7 +743,7 @@
       <workItem from="1546498852369" duration="9890000" />
       <workItem from="1546528164218" duration="1056000" />
       <workItem from="1547197756884" duration="53000" />
-      <workItem from="1547737317706" duration="8564000" />
+      <workItem from="1547737317706" duration="14324000" />
     </task>
     <task id="LOCAL-00001" summary="add new folder for diagram-&gt;diagramInfo&#10;change java-doc at StatisticController">
       <created>1547841924944</created>
@@ -749,11 +752,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547841924944</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add enum for risks">
+      <created>1547844559963</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1547844559963</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267348000" />
+    <option name="totallyTimeSpent" value="273108000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -778,7 +788,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60615385" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.17384616" order="2" side_tool="true" content_ui="tabs" />
@@ -841,7 +851,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add new folder for diagram-&gt;diagramInfo&#10;change java-doc at StatisticController" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new folder for diagram-&gt;diagramInfo&#10;change java-doc at StatisticController" />
+    <MESSAGE value="add enum for risks" />
+    <option name="LAST_COMMIT_MESSAGE" value="add enum for risks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1130,38 +1141,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/CallController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/PlataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/RatingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4896">
-          <caret line="304" column="28" lean-forward="false" selection-start-line="304" selection-start-column="28" selection-end-line="304" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/ScoringController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/UserBidsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -1180,26 +1159,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/diagramInfo/DiagramInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/StatisticController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1004">
-          <caret line="63" column="47" lean-forward="false" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Scoring/src/main/webapp/WEB-INF/views/footer/footer.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1213,6 +1172,58 @@
         <state relative-caret-position="119">
           <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/PlataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/CallController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-625">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/RatingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="300" column="44" lean-forward="true" selection-start-line="300" selection-start-column="44" selection-end-line="300" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/ScoringController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/diagramInfo/DiagramInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="107" column="43" lean-forward="false" selection-start-line="107" selection-start-column="43" selection-end-line="107" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/StatisticController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2560">
+          <caret line="145" column="13" lean-forward="true" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

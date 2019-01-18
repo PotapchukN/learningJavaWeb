@@ -32,9 +32,6 @@ public class CallController {
     ICallService callService;
 
 
-
-
-
     //Переход на страничку звонков
     @RequestMapping(value = "/calls/all", method = RequestMethod.POST)
     public String callsFoAdmin(Model model) {

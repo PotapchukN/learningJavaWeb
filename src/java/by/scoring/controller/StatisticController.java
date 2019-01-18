@@ -26,18 +26,6 @@ public class StatisticController {
     IUserService userService;
 
     @Autowired
-    IAnswerService answerService;
-
-    @Autowired
-    ICategoryQuestionService categoryQuestionService;
-
-    @Autowired
-    IGeneralScoreService generalScoreService;
-
-    @Autowired
-    IQuestionsService questionsService;
-
-    @Autowired
     IUserAnswersService userAnswersService;
 
     @Autowired
@@ -58,11 +46,11 @@ public class StatisticController {
         model.addAttribute("isAdmin", true);
         model.addAttribute("isLogin", false);
 
-        List<UserMoney> l= userMoneyService.listUserMoney();
+        List<UserMoney> listUsers= userMoneyService.listUserMoney();
         List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
 
-        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
-        model.addAllAttributes(attr);
+        Map<String,Integer> mapInfoForHistogrammAndDonut = diagramInfo.makeDiagramms( listUsers, listAnswers);
+        model.addAllAttributes(mapInfoForHistogrammAndDonut);
         return "/admin/statistic";
     }
 
@@ -71,23 +59,22 @@ public class StatisticController {
     public String showBadClients(Model model) {
 
         List <UserMoney> listUsers = userMoneyService.listUserMoney();
+        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
+
         List<UserMoney> listBadUsers = new ArrayList<>();
 
-        for(UserMoney x:listUsers){
-            if(x.getScore()<=minScore) {
-                listBadUsers.add(x);
+        for(UserMoney user_info:listUsers){
+            if(user_info.getScore()<=minScore) {
+                listBadUsers.add(user_info);
             }
         }
+
+        Map<String,Integer> mapInfoForHistogrammAndDonut = diagramInfo.makeDiagramms( listUsers, listAnswers);
 
         model.addAttribute("listBadUsers", listBadUsers);
         model.addAttribute("isAdmin", true);
         model.addAttribute("isLogin", false);
-
-        List<UserMoney> l= userMoneyService.listUserMoney();
-        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
-
-        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
-        model.addAllAttributes(attr);
+        model.addAllAttributes(mapInfoForHistogrammAndDonut);
 
         return "/admin/statistic";
     }
@@ -97,23 +84,23 @@ public class StatisticController {
     public String showAverageClients(Model model) {
 
         List <UserMoney> listUsers = userMoneyService.listUserMoney();
+        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
+
         List<UserMoney> listAverageUsers = new ArrayList<>();
 
-        for(UserMoney x:listUsers){
-            if(x.getScore()>minScore && x.getScore() <=averageScore) {
-                listAverageUsers.add(x);
+        for(UserMoney user_info:listUsers){
+            if(user_info.getScore()>minScore && user_info.getScore() <=averageScore) {
+                listAverageUsers.add(user_info);
             }
         }
 
+        Map<String,Integer> mapInfoForHistogrammAndDonut = diagramInfo.makeDiagramms( listUsers, listAnswers);
+
+        model.addAllAttributes(mapInfoForHistogrammAndDonut);
         model.addAttribute("listAverageUsers", listAverageUsers);
         model.addAttribute("isAdmin", true);
         model.addAttribute("isLogin", false);
 
-        List<UserMoney> l= userMoneyService.listUserMoney();
-        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
-
-        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
-        model.addAllAttributes(attr);
         return "/admin/statistic";
     }
 
@@ -122,11 +109,14 @@ public class StatisticController {
     public String showGoodClients(Model model) {
 
         List<UserMoney> listUsers = userMoneyService.listUserMoney();
+        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
+
+
         List<UserMoney> listGoodUsers = new ArrayList<>();
 
-        for(UserMoney x:listUsers){
-            if(x.getScore()>averageScore) {
-                listGoodUsers.add(x);
+        for(UserMoney user_info:listUsers){
+            if(user_info.getScore()>averageScore) {
+                listGoodUsers.add(user_info);
             }
         }
 
@@ -134,11 +124,8 @@ public class StatisticController {
         model.addAttribute("isAdmin", true);
         model.addAttribute("isLogin", false);
 
-        List<UserMoney> l= userMoneyService.listUserMoney();
-        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
-
-        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
-        model.addAllAttributes(attr);
+        Map<String,Integer> mapInfoForHistogrammAndDonut = diagramInfo.makeDiagramms( listUsers, listAnswers);
+        model.addAllAttributes(mapInfoForHistogrammAndDonut);
         return "/admin/statistic";
     }
 
@@ -149,26 +136,24 @@ public class StatisticController {
     public String showAnketClientBad(Model model, @PathVariable("id") long id){
 
         List<UserAnswers> listUserAnswers = userAnswersService.findAllByUser(userService.findById(id));
-
-        List <UserMoney> listUsers = userMoneyService.listUserMoney();
+        List<UserMoney> listUsers = userMoneyService.listUserMoney();
         List<UserMoney> listBadUsers = new ArrayList<>();
+        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
 
-        for(UserMoney x:listUsers){
-            if(x.getScore()<=minScore) {
-                listBadUsers.add(x);
+        for(UserMoney user_info:listUsers){
+            if(user_info.getScore()<=minScore) {
+                listBadUsers.add(user_info);
             }
         }
 
+        Map<String,Integer> mapInfoForHistogrammAndDonut = diagramInfo.makeDiagramms( listUsers, listAnswers);
+
+        model.addAllAttributes(mapInfoForHistogrammAndDonut);
         model.addAttribute("listBadUsers", listBadUsers);
         model.addAttribute("isAdmin", true);
         model.addAttribute("isLogin", false);
         model.addAttribute("listUserAnswers", listUserAnswers);
 
-        List<UserMoney> l= userMoneyService.listUserMoney();
-        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
-
-        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
-        model.addAllAttributes(attr);
         return "/admin/statistic";
     }
 

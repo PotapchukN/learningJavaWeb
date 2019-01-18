@@ -1,5 +1,6 @@
 package by.scoring.controller;
 
+import by.scoring.controller.diagramInfo.Risk;
 import by.scoring.model.entity.UserAnswers;
 import by.scoring.model.entity.UserMoney;
 import by.scoring.model.service.*;
@@ -61,7 +62,7 @@ public class RatingController {
         userAnswers.setAnswers( answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(1), age));
         userAnswers.setScore_for_user(answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(1), age).getScore());
         if(age.equals("Меньше 20 и больше 60")){
-            userAnswers.setRisk("Возраст: менее 20 и более 60 лет считается рискованным возрастом для банка");
+            userAnswers.setRisk(Risk.AGE.getRisk_factor());
         }
         userAnswersService.addUserAnswers(userAnswers);
 
@@ -71,7 +72,7 @@ public class RatingController {
         userAnswers2.setAnswers( answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(2), citizenship));
         userAnswers2.setScore_for_user(answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(2), citizenship).getScore());
         if(citizenship.equals("Нет")){
-            userAnswers2.setRisk("Отсутствие гражданства Республики Беларусь");
+            userAnswers2.setRisk(Risk.CITIZENSHIP.getRisk_factor());
         }
         userAnswersService.addUserAnswers(userAnswers2);
 
@@ -81,7 +82,7 @@ public class RatingController {
         userAnswers3.setAnswers( answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(3), registration));
         userAnswers3.setScore_for_user(answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(3), registration).getScore());
         if(registration.equals("Нет")){
-            userAnswers3.setRisk("Отсутствие прописки");
+            userAnswers3.setRisk(Risk.REGISTRATION.getRisk_factor());
         }
         userAnswersService.addUserAnswers(userAnswers3);
 
@@ -91,8 +92,7 @@ public class RatingController {
         userAnswers4.setAnswers( answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(4), housing));
         userAnswers4.setScore_for_user(answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(4), housing).getScore());
         if(housing.equals("Съемное жилье")){
-            userAnswers4.setRisk("Проживание в съемном жилье негативно влияет на кредитный рейтинг, т.к. значительная часть вашего дохода уходит на оплату аренды. " +
-                    "Когда у заемщика нет собственного жилья, лучшим вариантом считается проживание у родственников.");
+            userAnswers4.setRisk(Risk.HOUSING.getRisk_factor());
         }
         userAnswersService.addUserAnswers(userAnswers4);
 
@@ -102,8 +102,7 @@ public class RatingController {
         userAnswers5.setAnswers( answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(5), sp));
         userAnswers5.setScore_for_user(answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(5), sp).getScore());
         if(sp.equals("Холост/не замужем")|| sp.equals("В разводе") ){
-            userAnswers5.setRisk("Семейное положение: как правило семейные люди более ответственно подходят к" +
-                    "формированию бюджета ");
+            userAnswers5.setRisk(Risk.SP.getRisk_factor());
         }
         userAnswersService.addUserAnswers(userAnswers5);
 
@@ -120,7 +119,7 @@ public class RatingController {
         userAnswers7.setAnswers( answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(7), army));
         userAnswers7.setScore_for_user(answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(7), army).getScore());
         if(army.equals("Отсрочка")){
-            userAnswers7.setRisk("Отсрочка: негативно влияет на результат анкеты");
+            userAnswers7.setRisk(Risk.ARMY.getRisk_factor());
         }
         userAnswersService.addUserAnswers(userAnswers7);
 
@@ -147,7 +146,7 @@ public class RatingController {
         userAnswers.setAnswers( answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(8), education));
         userAnswers.setScore_for_user(answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(8), education).getScore());
         if(education.equals("Среднее")){
-            userAnswers.setRisk("Уровень образования");
+            userAnswers.setRisk(Risk.EDUCATION.getRisk_factor());
         }
         userAnswersService.addUserAnswers(userAnswers);
 
@@ -157,7 +156,7 @@ public class RatingController {
         userAnswers2.setAnswers( answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(9), kindOfActivity));
         userAnswers2.setScore_for_user(answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(9), kindOfActivity).getScore());
         if(kindOfActivity.equals("Пенсионер") || kindOfActivity.equals("Иное")){
-            userAnswers2.setRisk("Род деятельности");
+            userAnswers2.setRisk(Risk.KIND_OF_ACTIVITY.getRisk_factor());
         }
         userAnswersService.addUserAnswers(userAnswers2);
 
@@ -167,7 +166,7 @@ public class RatingController {
         userAnswers3.setAnswers( answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(10), skillLevel));
         userAnswers3.setScore_for_user(answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(10), skillLevel).getScore());
         if(skillLevel.equals("Отсутствует")){
-            userAnswers3.setRisk("Отсутствие квалификации");
+            userAnswers3.setRisk(Risk.SKILL_LEVEL.getRisk_factor());
         }
         userAnswersService.addUserAnswers(userAnswers3);
 
@@ -177,7 +176,7 @@ public class RatingController {
         userAnswers4.setAnswers( answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(11), experience));
         userAnswers4.setScore_for_user(answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(11), experience).getScore());
         if(experience.equals("Среднее")){
-            userAnswers4.setRisk("Стаж на текущем месте работы: небольшой стаж несколько снижает Вашу привлекательность в качестве заемщика для банка");
+            userAnswers4.setRisk(Risk.EXPERIENCE.getRisk_factor());
         }
         userAnswersService.addUserAnswers(userAnswers4);
 
@@ -203,7 +202,7 @@ public class RatingController {
         userAnswers.setAnswers( answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(12), credit));
         userAnswers.setScore_for_user(answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(12), credit).getScore());
         if(credit.equals("Да")){
-            userAnswers.setRisk("Наличие кредита");
+            userAnswers.setRisk(Risk.CREDIT.getRisk_factor());
         }
         userAnswersService.addUserAnswers(userAnswers);
 
@@ -228,7 +227,7 @@ public class RatingController {
         return "/credit/rating";
     }
 
-    //    Обработка информации о доходах и расходах         ?????????????
+    //    Обработка информации о доходах и расходах
     @RequestMapping(value = "/rating/income-info", method = RequestMethod.POST)
     public String listIncomeInfo(Model model,
                                  @RequestParam(value="general_income", required=false) Float general_income,
@@ -273,51 +272,48 @@ public class RatingController {
         userAnswers2.setAnswers( answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(20), car));
         userAnswers2.setScore_for_user(answerService.findByQuestionsAndAnswer(questionsService.getQuestionsById(20), car).getScore());
         if(flat.equals("Нет") && car.equals("Нет")){
-            userAnswers2.setRisk("Отсутствие недвижимого имущества несколько снижает итоговый результат");
+            userAnswers2.setRisk(Risk.FLAT.getRisk_factor());
         }
         userAnswersService.addUserAnswers(userAnswers2);
 
 
         List<UserAnswers> userAnswersList = userAnswersService.findAllByUser(userService.getCurrentUser());
-        int score=0;
+        int user_score=0;
         for(UserAnswers x :userAnswersList){
-            score+=x.getScore_for_user();
+            user_score+=x.getScore_for_user();
         }
 
         UserMoney userMoney = userMoneyService.findByUser(userService.getCurrentUser());
         userMoney.setConsumption(userMoney.getConsumption());
         userMoney.setIncome(userMoney.getIncome());
         userMoney.setUser(userService.getCurrentUser());
-        userMoney.setScore(score);
+        userMoney.setScore(user_score);
         userMoneyService.updateUserMoney(userMoney);
 
 //        ФАКТОРЫ
         List<String> factors = new ArrayList<>();
-        for(UserAnswers x :userAnswersList){
-            factors.add(x.getRisk());
+        for(UserAnswers user_info :userAnswersList){
+            factors.add(user_info.getRisk());
         }
         factors.removeIf(Objects::isNull);
 
-    if(score<=minScore){
-        model.addAttribute("red", true);
-    }else if(score<=averageScore){
-        model.addAttribute("yellow", true);
-    }else if(score<=maxScore){
-        model.addAttribute("green", true);
-    }
+        if(user_score<=minScore){
+            model.addAttribute("red", true);
+        }else if(user_score<=averageScore){
+            model.addAttribute("yellow", true);
+        }else if(user_score<=maxScore){
+            model.addAttribute("green", true);
+        }
 
         model.addAttribute("isAdmin", false);
         model.addAttribute("isLogin", true);
         model.addAttribute("success_holding_info", true);
-        model.addAttribute("score", score);
+        model.addAttribute("score", user_score);
         model.addAttribute("isAnket", true);
 
-        if(factors.size()>=1) {
-            model.addAttribute("listFactors", factors);
-        }
-        if(factors.size()==0){
-            model.addAttribute("successlistFactors", true);
-        }
+        if(factors.size()>=1) {model.addAttribute("listFactors", factors);}
+        if(factors.size()==0) {model.addAttribute("successlistFactors", true);}
+
         return "/credit/rating";
     }
 

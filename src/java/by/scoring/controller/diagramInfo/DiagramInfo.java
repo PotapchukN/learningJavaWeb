@@ -88,23 +88,23 @@ public class DiagramInfo {
                 flat++;
             }
         }
-        Map<String, Integer> attr = new HashMap<>();
-        attr.put("age",age);
-        attr.put("citizenship", citizenship);
-        attr.put("registration", registration);
-        attr.put("housing", housing);
-        attr.put("sp", sp);
-        attr.put("army", army);
-        attr.put("education", education);
-        attr.put("kindOfActivity", kindOfActivity);
-        attr.put("skillLevel", skillLevel);
-        attr.put("experience", experience);
-        attr.put("credit", credit);
-        attr.put("flat", flat);
-        attr.put("redRisk", redRisk);
-        attr.put("averageRisk", averageRisk);
-        attr.put("greenRisk", greenRisk);
+        Map<String, Integer> mapInfoForHistogrammAndDonut = new HashMap<>();
+        mapInfoForHistogrammAndDonut.put("age",age);
+        mapInfoForHistogrammAndDonut.put("citizenship", citizenship);
+        mapInfoForHistogrammAndDonut.put("registration", registration);
+        mapInfoForHistogrammAndDonut.put("housing", housing);
+        mapInfoForHistogrammAndDonut.put("sp", sp);
+        mapInfoForHistogrammAndDonut.put("army", army);
+        mapInfoForHistogrammAndDonut.put("education", education);
+        mapInfoForHistogrammAndDonut.put("kindOfActivity", kindOfActivity);
+        mapInfoForHistogrammAndDonut.put("skillLevel", skillLevel);
+        mapInfoForHistogrammAndDonut.put("experience", experience);
+        mapInfoForHistogrammAndDonut.put("credit", credit);
+        mapInfoForHistogrammAndDonut.put("flat", flat);
+        mapInfoForHistogrammAndDonut.put("redRisk", redRisk);
+        mapInfoForHistogrammAndDonut.put("averageRisk", averageRisk);
+        mapInfoForHistogrammAndDonut.put("greenRisk", greenRisk);
 
-        return attr;
+        return mapInfoForHistogrammAndDonut;
     }
 }
