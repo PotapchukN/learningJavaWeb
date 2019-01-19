@@ -1,8 +1,6 @@
 package by.scoring.controller;
 
 import by.scoring.model.entity.Bid;
-import by.scoring.model.entity.UserAnswers;
-import by.scoring.model.entity.UserMoney;
 import by.scoring.model.service.*;
 import org.h2.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 public class UserBidsController {
@@ -23,55 +20,33 @@ public class UserBidsController {
     IUserService userService;
 
     @Autowired
-    IAnswerService answerService;
-
-    @Autowired
-    ICategoryQuestionService categoryQuestionService;
-
-    @Autowired
-    IGeneralScoreService generalScoreService;
-
-    @Autowired
-    IQuestionsService questionsService;
-
-    @Autowired
-    IUserAnswersService userAnswersService;
-
-    @Autowired
-    ICreditInfoService creditInfoService;
-
-    @Autowired
-    IUserMoneyService userMoneyService;
-
-    @Autowired
     IBidsService bidService;
 
-    //Переход на страницу заявок
+    //Переход на страницу заявок, пришедших от администратора пользователю
     @RequestMapping(value = "/bids", method = RequestMethod.GET)
     public String PageStatistic(Model model) {
 
         List<Bid> listBids =  bidService.findByUser(userService.getCurrentUser());
         Date date = new Date();
         String bidTime = null;
-           for(Bid x:listBids){
-              if(!StringUtils.isNullOrEmpty(x.getDate().toString())){
-                  date = x.getDate();
+
+        for(Bid bid:listBids){
+              if(!StringUtils.isNullOrEmpty(bid.getDate().toString())){
+                  date = bid.getDate();
                }
-               if(!StringUtils.isNullOrEmpty(x.getTime())){
-                   bidTime = x.getTime();
+               if(!StringUtils.isNullOrEmpty(bid.getTime())){
+                   bidTime = bid.getTime();
                }
-               if(x.getGuarantor().equals("N")){
-                   x.setGuarantor("Нет");
-               }else if (x.getGuarantor().equals("Y")){
-                   x.setGuarantor("Да");
+               if(bid.getGuarantor().equals("N")){
+                   bid.setGuarantor("Нет");
+               }else if (bid.getGuarantor().equals("Y")){
+                   bid.setGuarantor("Да");
                }
            }
 
         SimpleDateFormat dt1 = new SimpleDateFormat("dd.MM.yyyy");
         String bidDate = dt1.format(date);
 
-//        SimpleDateFormat dt2 = new SimpleDateFormat("hh:mm");
-//        String bidTime = dt2.format(time);
 
         model.addAttribute("isAdmin", false);
         model.addAttribute("isLogin", true);

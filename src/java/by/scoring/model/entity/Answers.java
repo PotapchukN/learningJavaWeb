@@ -23,18 +23,6 @@ public class Answers implements Serializable {
      @JoinColumn(name="question_id")
      private Questions questions;
 
-
-//     @OneToMany(mappedBy = "answers")
-//     private UserAnswers userAnswers;
-
-//     public UserAnswers getUserAnswers() {
-//         return userAnswers;
-//     }
-//
-//     public void setUserAnswers(UserAnswers userAnswers) {
-//         this.userAnswers = userAnswers;
-//     }
-
      public Long getId() {return id;}
 
      public String getAnswer() {return answer;}
@@ -51,4 +39,25 @@ public class Answers implements Serializable {
 
      public void setQuestions(Questions questions) {this.questions = questions;}
 
+     @Override
+     public boolean equals(Object o) {
+         if (this == o) return true;
+         if (!(o instanceof Answers)) return false;
+
+         Answers answers = (Answers) o;
+
+         if (score != answers.score) return false;
+         if (id != null ? !id.equals(answers.id) : answers.id != null) return false;
+         if (answer != null ? !answer.equals(answers.answer) : answers.answer != null) return false;
+         return questions != null ? questions.equals(answers.questions) : answers.questions == null;
+     }
+
+     @Override
+     public int hashCode() {
+         int result = id != null ? id.hashCode() : 0;
+         result = 31 * result + (answer != null ? answer.hashCode() : 0);
+         result = 31 * result + score;
+         result = 31 * result + (questions != null ? questions.hashCode() : 0);
+         return result;
+     }
  }

@@ -57,4 +57,30 @@ public class UserAnswers implements Serializable {
     public int getScore_for_user() {return score_for_user;}
 
     public void setScore_for_user(int score_for_user) {this.score_for_user = score_for_user;}
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof UserAnswers)) return false;
+
+        UserAnswers that = (UserAnswers) o;
+
+        if (question_id != that.question_id) return false;
+        if (score_for_user != that.score_for_user) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (answers != null ? !answers.equals(that.answers) : that.answers != null) return false;
+        if (user != null ? !user.equals(that.user) : that.user != null) return false;
+        return risk != null ? risk.equals(that.risk) : that.risk == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + question_id;
+        result = 31 * result + (answers != null ? answers.hashCode() : 0);
+        result = 31 * result + score_for_user;
+        result = 31 * result + (user != null ? user.hashCode() : 0);
+        result = 31 * result + (risk != null ? risk.hashCode() : 0);
+        return result;
+    }
 }

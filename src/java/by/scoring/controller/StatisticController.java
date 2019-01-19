@@ -163,27 +163,20 @@ public class StatisticController {
     public String showAnketClientAverage(Model model, @PathVariable("id") long id){
 
         List<UserAnswers> listUserAnswers = userAnswersService.findAllByUser(userService.findById(id));
-
-
-
         List <UserMoney> listUsers = userMoneyService.listUserMoney();
+        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
         List<UserMoney> listAverageUsers = new ArrayList<>();
 
-        for(UserMoney x:listUsers){
-            if(x.getScore()>minScore && x.getScore() <=averageScore) {
-                listAverageUsers.add(x);
+        for(UserMoney user_info:listUsers){
+            if(user_info.getScore()>minScore && user_info.getScore() <=averageScore) {
+                listAverageUsers.add(user_info);
             }
         }
 
+        Map<String,Integer> mapInfoForHistogrammAndDonut = diagramInfo.makeDiagramms( listUsers, listAnswers);
 
-        List<UserMoney> l= userMoneyService.listUserMoney();
-        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
-
-        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
-        model.addAllAttributes(attr);
-
+        model.addAllAttributes(mapInfoForHistogrammAndDonut);
         model.addAttribute("listAverageUsers", listAverageUsers);
-
         model.addAttribute("isAdmin", true);
         model.addAttribute("isLogin", false);
         model.addAttribute("listUserAnswers", listUserAnswers);
@@ -196,25 +189,21 @@ public class StatisticController {
     public String showAnketClientGood(Model model, @PathVariable("id") long id){
 
         List<UserAnswers> listUserAnswers = userAnswersService.findAllByUser(userService.findById(id));
-
-        model.addAttribute("listUserAnswers", listUserAnswers);
-
         List <UserMoney> listUsers = userMoneyService.listUserMoney();
         List<UserMoney> listGoodUsers = new ArrayList<>();
+        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
 
-        for(UserMoney x:listUsers){
-            if(x.getScore()>averageScore) {
-                listGoodUsers.add(x);
+        for(UserMoney user_info:listUsers){
+            if(user_info.getScore()>averageScore) {
+                listGoodUsers.add(user_info);
             }
         }
 
+        Map<String,Integer> mapInfoForHistogrammAndDonut = diagramInfo.makeDiagramms( listUsers, listAnswers);
+
         model.addAttribute("listGoodUsers", listGoodUsers);
-
-        List<UserMoney> l= userMoneyService.listUserMoney();
-        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
-
-        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
-        model.addAllAttributes(attr);
+        model.addAttribute("listUserAnswers", listUserAnswers);
+        model.addAllAttributes(mapInfoForHistogrammAndDonut);
         model.addAttribute("isAdmin", true);
         model.addAttribute("isLogin", false);
 
@@ -242,17 +231,22 @@ public class StatisticController {
                            @RequestParam("time") String time
                            ){
 
+        List<UserAnswers> listUserAnswers = userAnswersService.findAllByUser(userService.findById(id));
+        List<UserMoney> listUsers= userMoneyService.listUserMoney();
+        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
+        Map<String,Integer> mapInfoForHistogrammAndDonut = diagramInfo.makeDiagramms( listUsers, listAnswers);
 
         Bid bid = new Bid();
         bid.setUser(userService.findById(id));
         bid.setCredit(creditInfoService.findByType(name1));
         bid.setMaxSum(sum1);
         bid.setMaxTerm(period1);
-        if(StringUtils.isNullOrEmpty(guarantor1)){bid.setGuarantor("N");}else{
+        if(StringUtils.isNullOrEmpty(guarantor1)){
+            bid.setGuarantor("N");
+        }else{
             bid.setGuarantor("Y");
         }
         bid.setTime(LocalTime.parse(time).format(DateTimeFormatter.ofPattern("HH:mm")));
-       System.out.println("Дата1: "+date);
         bid.setDate(date);
         bidService.addBid(bid);
 
@@ -267,7 +261,6 @@ public class StatisticController {
             bid2.setGuarantor("Y");
             }
         bid2.setTime(LocalTime.parse(time).format(DateTimeFormatter.ofPattern("HH:mm")));
-        System.out.println("Дата2: "+date);
         bid2.setDate(date);
         bidService.addBid(bid2);
 
@@ -288,15 +281,7 @@ public class StatisticController {
         model.addAttribute("sendBid", true);
         model.addAttribute("isAdmin", true);
         model.addAttribute("isLogin", false);
-
-        List<UserMoney> l= userMoneyService.listUserMoney();
-        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
-
-        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
-        model.addAllAttributes(attr);
-
-
-        List<UserAnswers> listUserAnswers = userAnswersService.findAllByUser(userService.findById(id));
+        model.addAllAttributes(mapInfoForHistogrammAndDonut);
         model.addAttribute("listUserAnswers", listUserAnswers);
 
         return "/admin/statistic";
@@ -309,6 +294,9 @@ public class StatisticController {
     public String showBidForm(Model model, @PathVariable("id") long id){
 
         String fio = userService.findById(id).getName() + " " + userService.findById(id).getSurname();
+        List<UserMoney> listUsers= userMoneyService.listUserMoney();
+        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
+        Map<String,Integer> mapInfoForHistogrammAndDonut = diagramInfo.makeDiagramms( listUsers, listAnswers);
 
         model.addAttribute("fio",fio);
         model.addAttribute("listCredit", creditInfoService.listCreditInfo());
@@ -316,12 +304,7 @@ public class StatisticController {
         model.addAttribute("showBidForm", true);
         model.addAttribute("isAdmin", true);
         model.addAttribute("isLogin", false);
-
-        List<UserMoney> l= userMoneyService.listUserMoney();
-        List<UserAnswers> listAnswers = userAnswersService.listUserAnswers();
-
-        Map<String,Integer> attr = diagramInfo.makeDiagramms( l, listAnswers);
-        model.addAllAttributes(attr);
+        model.addAllAttributes(mapInfoForHistogrammAndDonut);
 
         return "/admin/statistic";
     }

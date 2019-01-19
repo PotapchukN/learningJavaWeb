@@ -25,4 +25,24 @@ public class GeneralScore implements Serializable {
     public int getMin_score() {return minScore;}
 
     public void setMin_score(int min_score) {this.minScore = min_score;}
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof GeneralScore)) return false;
+
+        GeneralScore that = (GeneralScore) o;
+
+        if (maxScore != that.maxScore) return false;
+        if (minScore != that.minScore) return false;
+        return id != null ? id.equals(that.id) : that.id == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + maxScore;
+        result = 31 * result + minScore;
+        return result;
+    }
 }

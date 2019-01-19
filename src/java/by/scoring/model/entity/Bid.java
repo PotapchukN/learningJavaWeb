@@ -75,8 +75,35 @@ public class Bid implements Serializable{
 
     public String getTime() {return time;}
 
-    public void setTime(String time) {
+    public void setTime(String time) {this.time = time;}
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Bid)) return false;
 
-        this.time = time;}
+        Bid bid = (Bid) o;
+
+        if (id != null ? !id.equals(bid.id) : bid.id != null) return false;
+        if (user != null ? !user.equals(bid.user) : bid.user != null) return false;
+        if (credit != null ? !credit.equals(bid.credit) : bid.credit != null) return false;
+        if (maxTerm != null ? !maxTerm.equals(bid.maxTerm) : bid.maxTerm != null) return false;
+        if (maxSum != null ? !maxSum.equals(bid.maxSum) : bid.maxSum != null) return false;
+        if (guarantor != null ? !guarantor.equals(bid.guarantor) : bid.guarantor != null) return false;
+        if (date != null ? !date.equals(bid.date) : bid.date != null) return false;
+        return time != null ? time.equals(bid.time) : bid.time == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (user != null ? user.hashCode() : 0);
+        result = 31 * result + (credit != null ? credit.hashCode() : 0);
+        result = 31 * result + (maxTerm != null ? maxTerm.hashCode() : 0);
+        result = 31 * result + (maxSum != null ? maxSum.hashCode() : 0);
+        result = 31 * result + (guarantor != null ? guarantor.hashCode() : 0);
+        result = 31 * result + (date != null ? date.hashCode() : 0);
+        result = 31 * result + (time != null ? time.hashCode() : 0);
+        return result;
+    }
 }

@@ -51,4 +51,29 @@ public class UserMoney implements Serializable {
     public Float getConsumption() {return consumption;}
 
     public void setConsumption(Float consumption) {this.consumption = consumption;}
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof UserMoney)) return false;
+
+        UserMoney userMoney = (UserMoney) o;
+
+        if (score != userMoney.score) return false;
+        if (id != null ? !id.equals(userMoney.id) : userMoney.id != null) return false;
+        if (income != null ? !income.equals(userMoney.income) : userMoney.income != null) return false;
+        if (consumption != null ? !consumption.equals(userMoney.consumption) : userMoney.consumption != null)
+            return false;
+        return user != null ? user.equals(userMoney.user) : userMoney.user == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (income != null ? income.hashCode() : 0);
+        result = 31 * result + (consumption != null ? consumption.hashCode() : 0);
+        result = 31 * result + (user != null ? user.hashCode() : 0);
+        result = 31 * result + score;
+        return result;
+    }
 }

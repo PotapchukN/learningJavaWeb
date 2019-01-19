@@ -57,6 +57,30 @@ public class Calls implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Calls)) return false;
+
+        Calls calls = (Calls) o;
+
+        if (id != null ? !id.equals(calls.id) : calls.id != null) return false;
+        if (topic != null ? !topic.equals(calls.topic) : calls.topic != null) return false;
+        if (name != null ? !name.equals(calls.name) : calls.name != null) return false;
+        if (phone != null ? !phone.equals(calls.phone) : calls.phone != null) return false;
+        return email != null ? email.equals(calls.email) : calls.email == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (topic != null ? topic.hashCode() : 0);
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (phone != null ? phone.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        return result;
+    }
 }
 
 
