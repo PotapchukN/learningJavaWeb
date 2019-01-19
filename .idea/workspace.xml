@@ -8,19 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b88c003b-33ec-4fb4-93cf-1d4fbc498057" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Scoring/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/StatisticController.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/StatisticController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/UserBidsController.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/controller/UserBidsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/dao/AnswersDao.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/dao/AnswersDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/Answers.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/Answers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/Bid.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/Bid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/Calls.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/Calls.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/CategoryQuestion.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/CategoryQuestion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/CreditInfo.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/CreditInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/GeneralScore.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/GeneralScore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/Questions.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/Questions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/User.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/UserAnswers.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/UserAnswers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/UserMoney.java" afterPath="$PROJECT_DIR$/../Scoring/src/java/by/scoring/model/entity/UserMoney.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../Scoring/out/" />
     <ignored path="$PROJECT_DIR$/../Scoring/target/" />
@@ -737,7 +724,7 @@
       <workItem from="1546498852369" duration="9890000" />
       <workItem from="1546528164218" duration="1056000" />
       <workItem from="1547197756884" duration="53000" />
-      <workItem from="1547737317706" duration="15619000" />
+      <workItem from="1547737317706" duration="15696000" />
     </task>
     <task id="LOCAL-00001" summary="add new folder for diagram-&gt;diagramInfo&#10;change java-doc at StatisticController">
       <created>1547841924944</created>
@@ -760,11 +747,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547850388074</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add equals() &amp; hashCode() to 'entity'">
+      <created>1547908257762</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547908257762</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274403000" />
+    <option name="totallyTimeSpent" value="274480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -853,7 +847,8 @@
     <MESSAGE value="add new folder for diagram-&gt;diagramInfo&#10;change java-doc at StatisticController" />
     <MESSAGE value="add enum for risks" />
     <MESSAGE value="some refactoring in controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="some refactoring in controllers" />
+    <MESSAGE value="add equals() &amp; hashCode() to 'entity'" />
+    <option name="LAST_COMMIT_MESSAGE" value="add equals() &amp; hashCode() to 'entity'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
