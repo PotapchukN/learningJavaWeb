@@ -71,7 +71,7 @@
             </li>
         </ul>
         <c:if test="${isLogin}">
-            <a class="nav-item mr-2 enter" href="<c:url value='/logout'/>">Выйти</a>
+            <a class="nav-item mr-2 grey" href="<c:url value='/logout'/>">Выйти</a>
         </c:if>
 
     </div>
@@ -79,7 +79,7 @@
 
 <%--------------------------------------------Progress-------------------------------------------------%>
 
-<div class="bk">
+<div class="progress-block">
 
 <c:if test="${!empty anketStart}">
     <small class="form-text text-muted anksmall">Пожалуйста, заполните скоринг-анкету, для оценки кредитоспособности
@@ -90,11 +90,11 @@
     <small class="form-text text-muted mr-5">Спасибо за заполнение скоринг-анкеты!</small>
 
     <form action="<c:url value="/rating/openAnket"/>" method="get">
-        <button id="openAnket" type="submit" class="btn btn-dark wid0 step0" name="openAnket" value ="/categorys/openAnket">Пройти ещё раз</button>
+        <button id="openAnket" type="submit" class="btn btn-dark size-btn-for-against-question step0" name="openAnket" value ="/categorys/openAnket">Пройти ещё раз</button>
     </form>
     </div>
 </c:if>
-    <h5 class="captionAnketa0 mb-3 mt-4 card-title">Скоринг-анкета:</h5>
+    <h5 class="caption-of-the-questionnaire mb-3 mt-4 card-title">Скоринг-анкета:</h5>
     <div class="progress">
         <div class="progress-bar progress-bar-striped active" id="progress-bar"
             role="progressbar" aria-valuenow="0" aria-valuemin="0"
@@ -111,9 +111,9 @@
 <div id="accordion">
     <c:if test="${!empty anketStart}">
 <c:if test="${not empty running_success}">
-    <form class="aboutmyself" action="<c:url value="/rating/general-info"/>"
+    <form class="section-aboutMyself" action="<c:url value="/rating/general-info"/>"
           method="post">
-        <h5 class="captionAnketa mb-3 pt-2 card-title">Личные данные</h5>
+        <h5 class="section-of-the-questionnaire mb-3 pt-2 card-title">Личные данные</h5>
         <div class="card">
             <div class="card-header" id="headingOne">
                 <h5 class="mb-0" id="age">
@@ -306,15 +306,15 @@
             </div>
         </div>
         <button type="submit"
-                class="btn btn-primary wid step" onsubmit="prog()">Далее</button>
+                class="btn btn-primary size-btn step" onsubmit="prog()">Далее</button>
     </form>
 </c:if>
     <%------------------------------------Новый раздел, новая форма---------------работа-------------------------%>
     <c:if test="${not empty success_general_info}">
-    <form class="work" action="<c:url value="/rating/job-info"/>"
+    <form class="section-work" action="<c:url value="/rating/job-info"/>"
           method="post">
         <script> $("#progress-bar").css("width", "40%");</script>
-        <h5 class="captionAnketa mb-3 pt-2 card-title">Образование и работа</h5>
+        <h5 class="section-of-the-questionnaire mb-3 pt-2 card-title">Образование и работа</h5>
         <div class="card">
             <div class="card-header" id="headingEight">
                 <h5 class="mb-0">
@@ -431,16 +431,16 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary wid step" onsubmit="prog2()">Далее</button>
+        <button type="submit" class="btn btn-primary size-btn step" onsubmit="prog2()">Далее</button>
     </form>
     </c:if>
     <%------------------------------------Новый раздел, новая форма---------------кредитная история-------------------------%>
 
     <c:if test="${not empty success_job_info}">
-    <form class="credhistory" action="<c:url value="/rating/credit-info"/>"
+    <form class="section-creditHistory" action="<c:url value="/rating/credit-info"/>"
           method="post">
         <script>$("#progress-bar").css("width", "60%");</script>
-        <h5 class="captionAnketa mb-3 pt-2 card-title">Кредитная история</h5>
+        <h5 class="section-of-the-questionnaire mb-3 pt-2 card-title">Кредитная история</h5>
         <div class="card">
             <div class="card-header" id="headingTwelve">
                 <h5 class="mb-0">
@@ -503,16 +503,16 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary wid step" onsubmit="prog3()">Далее</button>
+        <button type="submit" class="btn btn-primary size-btn step" onsubmit="prog3()">Далее</button>
     </form>
     </c:if>
 
     <%------------------------------------Новый раздел, новая форма---------------доходы-расходы-----------------------%>
     <c:if test="${not empty success_credit_info}">
-    <form class="income" action="<c:url value="/rating/income-info"/>"
+    <form class="section-income" action="<c:url value="/rating/income-info"/>"
           method="post">
         <script>$("#progress-bar").css("width", "75%");</script>
-        <h5 class="captionAnketa mb-3 pt-2 card-title">Информация о доходах и расходах</h5>
+        <h5 class="section-of-the-questionnaire mb-3 pt-2 card-title">Информация о доходах и расходах</h5>
         <div class="card">
             <div class="card-header" id="headingFifteen">
                 <h5 class="mb-0">
@@ -593,17 +593,17 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary wid step">Далее</button>
+        <button type="submit" class="btn btn-primary size-btn step">Далее</button>
     </form>
     </c:if>
 
     <%------------------------------------Новый раздел, новая форма---------------Имущество-----------------------%>
 
     <c:if test="${not empty success_income_info}">
-    <form class="holding" action="<c:url value="/rating/holding-info"/>"
+    <form class="section-holding" action="<c:url value="/rating/holding-info"/>"
           method="post">
         <script>$("#progress-bar").css("width", "95%");</script>
-        <h5 class="captionAnketa mb-3 pt-2 card-title">Имущество</h5>
+        <h5 class="section-of-the-questionnaire mb-3 pt-2 card-title">Имущество</h5>
         <div class="card">
             <div class="card-header" id="headingNineteen">
                 <h5 class="mb-0">
@@ -646,23 +646,23 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-dark wid step">Готово!</button>
+        <button type="submit" class="btn btn-dark size-btn step">Готово!</button>
     </form>
     </c:if>
     </c:if>
 
     <c:if test="${not empty success_holding_info}">
-    <div class="done bk2">
+    <div class="section-property background-for-section-property">
 
         <script>
             $("#progress-bar").css("width", "100%");
-            $(".captionAnketa0").text("Скоринг-Анкета пройдена!");
+            $(".caption-of-the-questionnaire").text("Скоринг-Анкета пройдена!");
         </script>
 
 
         <div class="card mb-5">
             <div class="card-header">
-                <h5 class="captionAnketa mb-3 pt-2 ml-3 card-title">Ваш результат:<br>
+                <h5 class="section-of-the-questionnaire mb-3 pt-2 ml-3 card-title">Ваш результат:<br>
                     <c:if test="${red}">
                         <p class="ml-5 red">${score}</p>
 
@@ -698,13 +698,13 @@
                 </h5>
             </div>
             <div class="card-body">
-                <h5 class="captionAnketa mb-3 pt-2 card-title">Факторы:</h5>
+                <h5 class="section-of-the-questionnaire mb-3 pt-2 card-title">Факторы:</h5>
             </div>
             <c:if test="${not empty listFactors}">
             <c:forEach items="${listFactors}" var="fact">
                 <blockquote class="blockquote mb-0">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="checkmark">
+                        <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="size-icon">
                             ${fact}</li>
                     </ul>
                 </blockquote>
@@ -713,7 +713,7 @@
             <c:if test="${not empty successlistFactors}">
                 <blockquote class="blockquote mb-0">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="checkmark">
+                        <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="size-icon">
                                 Не выявлено факторов, существенно снижающих балл анкеты!</li>
                     </ul>
                 </blockquote>

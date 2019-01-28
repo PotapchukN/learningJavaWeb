@@ -9,6 +9,7 @@ import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name="bids")
@@ -96,14 +97,15 @@ public class Bid implements Serializable{
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (user != null ? user.hashCode() : 0);
-        result = 31 * result + (credit != null ? credit.hashCode() : 0);
-        result = 31 * result + (maxTerm != null ? maxTerm.hashCode() : 0);
-        result = 31 * result + (maxSum != null ? maxSum.hashCode() : 0);
-        result = 31 * result + (guarantor != null ? guarantor.hashCode() : 0);
-        result = 31 * result + (date != null ? date.hashCode() : 0);
-        result = 31 * result + (time != null ? time.hashCode() : 0);
-        return result;
+        return Objects.hash(user,credit,maxTerm,maxSum,guarantor,date,time);
+//        int result = id != null ? id.hashCode() : 0;
+//        result = 31 * result + (user != null ? user.hashCode() : 0);
+//        result = 31 * result + (credit != null ? credit.hashCode() : 0);
+//        result = 31 * result + (maxTerm != null ? maxTerm.hashCode() : 0);
+//        result = 31 * result + (maxSum != null ? maxSum.hashCode() : 0);
+//        result = 31 * result + (guarantor != null ? guarantor.hashCode() : 0);
+//        result = 31 * result + (date != null ? date.hashCode() : 0);
+//        result = 31 * result + (time != null ? time.hashCode() : 0);
+//        return result;
     }
 }

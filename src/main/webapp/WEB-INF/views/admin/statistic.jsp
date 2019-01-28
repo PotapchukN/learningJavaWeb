@@ -69,7 +69,7 @@
             </li>
         </ul>
         <c:if test="${isLogin}">
-            <a class="nav-item mr-2 enter" href="<c:url value='/logout'/>">Выйти</a>
+            <a class="nav-item mr-2 grey-color" href="<c:url value='/logout'/>">Выйти</a>
         </c:if>
 
     </div>
@@ -364,7 +364,7 @@
 <hr class="black"/>
 
 
-<div class = "row1">
+<div class = "flex-row-for-btnDrawDiagramm">
 
     <input type="button" class="btn btn-primary" onclick="drawChart(${redRisk},${averageRisk},${greenRisk})" value="Статистика кредитоспособности клиентов">
     <input type="button" class="btn btn-primary" onclick="drawBasic(${age},${citizenship},${registration},${housing},${sp},${army},
@@ -372,8 +372,8 @@
     ${credit},${flat})" value="Статистика рисков">
 </div>
 
-<div class="row0" id="bb">
-    <div class="wid23">
+<div class="flex-row-for-donut" id="bb">
+    <div class="size-block-for-donut">
 
         <div id="piechart"></div>
         <script>
@@ -407,7 +407,7 @@
 
         </script>
     </div>
-    <div class="wid2">
+    <div class="size-risk-block">
         <div id="chart_div"></div>
         <script>
             google.charts.load('current', {packages: ['corechart', 'bar']});

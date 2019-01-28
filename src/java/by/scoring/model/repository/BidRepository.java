@@ -1,15 +1,14 @@
-package by.scoring.model.dao;
+package by.scoring.model.repository;
 
 import by.scoring.model.entity.Bid;
 import by.scoring.model.entity.CreditInfo;
 import by.scoring.model.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
 
-public interface BidDao extends JpaRepository<Bid, Long> {
+public interface BidRepository extends JpaRepository<Bid, Long> {
 
     List<Bid> findByCredit(CreditInfo credit);
     List<Bid> findByUser(User user);

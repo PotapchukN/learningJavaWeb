@@ -22,12 +22,12 @@ hr{
     display: flex;
     flex-direction: row;
 }
-.space-bet{
+.space-between{
      justify-content: space-between;
      align-items: center;
  }
 
-.space-bet1{
+.space-around{
     justify-content: space-around;
     align-items: baseline;
     font-size: 18px;
@@ -35,10 +35,10 @@ hr{
 .smallText{
     font-size: 12px;
 }
-.enter{
+.grey-color{
     color:rgba(0,0,0,.5) !important;
 }
-.checkmark{
+.size-icon{
     width: 23px;
     height:15px;
     margin-right: 5px;
@@ -47,7 +47,7 @@ hr{
     margin-right: 20px;
     font-weight: bold;
 }
-.checkmark2{
+.bigger-size-icon{
     width: 30px;
     height:30px;
     margin-right: 10px;
@@ -62,11 +62,7 @@ img{
     height:250px;
 }
 
-.w-100 {
-    width: 100%!important;
-}
-
-.d-block {
+.display-block {
     display: block!important;
 }
 
@@ -75,8 +71,7 @@ img{
     height: 600px !important;
 }
 
-.wid{
-    /*flex-direction: row !important;*/
+.size-btn{
     width: 400px !important;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
@@ -89,38 +84,35 @@ img{
     width:fit-content;
     height: fit-content;
 }
-.wid2{
-    /*display: flex;*/
-    /*flex-direction: row !important;*/
+.size-risk-block{
     width: 600px !important;
     height: 350px;
     margin-top: 50px!important;
-    /*box-shadow: 0 0 10px rgba(0,0,0,0.2);*/
 }
-.wid23{
+.size-block-for-donut{
     width: 600px !important;
     height: 400px;
     margin-top: -30px!important;
 }
 
-.wid0{
+.size-btn-for-against-question{
     width: 200px !important;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-.wid:hover{
+.size-btn:hover{
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
-.bor{
+.border-none{
     border: none !important;
     border-radius: 0 !important;
  }
 
-.row{
+.margin-for-cards-on-main-page{
     margin-left: 150px !important;
     margin-top: 100px !important;
     margin-bottom: 100px !important;
 }
-.row0{
+.flex-row-for-donut{
     width: 100%;
     height: fit-content;
     margin-left: 0 !important;
@@ -130,7 +122,7 @@ img{
     flex-direction: row;
     justify-content: center;
 }
-.row1{
+.flex-row-for-btnDrawDiagramm{
     width: 100%;
     height: fit-content;
     display: flex;
@@ -140,7 +132,7 @@ img{
     margin-bottom: 10px!important;
 
 }
-.freeCons{
+.light-grey-color{
     color: #9d9d9d !important;
 }
 .course{
@@ -149,10 +141,10 @@ img{
     margin-bottom: 3px!important;
 
 }
-.center{
+.ml-for-cardTitle{
     margin-left: 90px;
 }
-.dark{
+.color-currencies{
     color: rgba(0, 0, 0, 0.85) !important;
     font-weight: 700 !important;
     font-size: 18px;
@@ -163,7 +155,7 @@ img{
 }
 
 
-/*для скоринг анкеты*/
+/**для скоринг анкеты*/
 .progress{
     position: relative;
     margin-top: 20px;
@@ -171,7 +163,7 @@ img{
     width: 85%;
     margin-left: 100px;
 }
-.captionAnketa0{
+.caption-of-the-questionnaire{
     margin-left: 40%;
     font-size: 25px;
     font-weight: 700;
@@ -179,7 +171,7 @@ img{
     color: #3b558e;
 
 }
-.captionAnketa{
+.section-of-the-questionnaire{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -188,7 +180,7 @@ img{
     font-weight: 600;
     color: #3b558e;
 }
-.aboutmyself, .holding, .credhistory, .income, .work, .done{
+.section-aboutMyself, .section-holding, .section-creditHistory, .section-income, .section-work, .section-property{
     width: 85%;
     margin-left: 100px;
     margin-top: 145px!important;
@@ -200,11 +192,11 @@ img{
     flex-direction: column;
 }
 
-.wid6{
+.width-for-calculateSolvency{
     width: 30%;
     margin-left: 30%;
 }
-.newdone{
+.flex-space-evenly{
     width: 85%;
     margin-left: 50px;
     margin-top: 14px!important;
@@ -224,10 +216,10 @@ img{
     background-color: #fefffee8!important;
     height: fit-content;
 }
-.bk2{
+.background-for-section-property{
     background-color: #fefffee8!important;
 }
-.bk{
+.progress-block{
     width: 100%;
     background-color: #fefffee8;
     height: 9em;

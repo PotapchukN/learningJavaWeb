@@ -1,6 +1,6 @@
 package by.scoring.model.service.impl;
 
-import by.scoring.model.dao.UserDao;
+import by.scoring.model.repository.UserRepository;
 import by.scoring.model.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -18,12 +18,12 @@ import java.util.Set;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
-    private UserDao userDao;
+    private UserRepository userRepository;
 
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = userDao.findByEmail(email);
+        User user = userRepository.findByEmail(email);
         Set<GrantedAuthority> grantedAuthority = new HashSet<>();
         grantedAuthority.add(new SimpleGrantedAuthority(user.getRole()));
         if(!user.getConfirm().equals("Y"))

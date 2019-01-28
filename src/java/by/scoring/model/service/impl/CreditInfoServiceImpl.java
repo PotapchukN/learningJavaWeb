@@ -1,7 +1,6 @@
 package by.scoring.model.service.impl;
 
-import by.scoring.model.dao.CreditInfoDao;
-import by.scoring.model.entity.Answers;
+import by.scoring.model.repository.CreditInfoRepository;
 import by.scoring.model.entity.CreditInfo;
 import by.scoring.model.service.ICreditInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,23 +12,26 @@ import java.util.List;
 public class CreditInfoServiceImpl implements ICreditInfoService {
 
     @Autowired
-    private CreditInfoDao creditInfoDao;
+    private CreditInfoRepository creditInfoRepository;
 
     @Override
-    public void addCreditInfo(CreditInfo creditInfo) {creditInfoDao.save(creditInfo);}
+    public void addCreditInfo(CreditInfo creditInfo) {
+        creditInfoRepository.save(creditInfo);}
 
     @Override
-    public void updateCreditInfo(CreditInfo creditInfo) {creditInfoDao.save(creditInfo);}
+    public void updateCreditInfo(CreditInfo creditInfo) {
+        creditInfoRepository.save(creditInfo);}
 
     @Override
-    public void removeCreditInfo(long id) {creditInfoDao.delete(id);}
+    public void removeCreditInfo(long id) {
+        creditInfoRepository.delete(id);}
 
     @Override
-    public CreditInfo getCreditInfoById(long id) {return creditInfoDao.findOne(id);}
+    public CreditInfo getCreditInfoById(long id) {return creditInfoRepository.findOne(id);}
 
     @Override
-    public List<CreditInfo> listCreditInfo() {return creditInfoDao.findAll();}
+    public List<CreditInfo> listCreditInfo() {return creditInfoRepository.findAll();}
 
     @Override
-    public CreditInfo findByType(String type) {return creditInfoDao.findByType(type);}
+    public CreditInfo findByType(String type) {return creditInfoRepository.findByType(type);}
 }

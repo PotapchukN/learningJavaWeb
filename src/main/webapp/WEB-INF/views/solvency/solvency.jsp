@@ -72,10 +72,10 @@
             </li>
         </ul>
         <c:if test="${!isLogin}">
-            <a class="nav-item mr-2 enter" href="<c:url value='/login'/>">Вход</a>
+            <a class="nav-item mr-2 grey-color" href="<c:url value='/login'/>">Вход</a>
         </c:if>
         <c:if test="${isLogin}">
-            <a class="nav-item mr-2 enter" href="<c:url value='/logout'/>">Выйти</a>
+            <a class="nav-item mr-2 grey-color" href="<c:url value='/logout'/>">Выйти</a>
         </c:if>
 
     </div>
@@ -90,7 +90,7 @@
 
 
     <c:if test="${Calculate0}">
-        <div class="card mt-3 ml-5 wid6 bluedark">
+        <div class="card mt-3 ml-5 width-for-calculateSolvency bluedark">
             <form  action="<c:url value="/solvency/calculate/${id}"/>" method="post">
                 <div class="form-group">
                     <h5>Платежеспособность: ${fio}</h5>
@@ -139,7 +139,7 @@
     </c:if>
 
 
-<div class="flex-row newdone">
+<div class="flex-row flex-space-evenly">
     <div class="card">
         <div class="card-header">Кредиты</div>
         <div class="card-body">
@@ -193,7 +193,7 @@
             </form>
 
             <c:if test="${!empty maxSummCredit}">
-                <h5 class="captionAnketa"> Максимальный размер кредита:<br/>
+                <h5 class="section-of-the-questionnaire"> Максимальный размер кредита:<br/>
                     "${creditType}"
                     <br/> для Вас составит ${maxSummCredit} бел. руб.</h5>
             </c:if>

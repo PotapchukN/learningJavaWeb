@@ -1,7 +1,6 @@
 package by.scoring.model.service.impl;
 
-import by.scoring.model.dao.QuestionsDao;
-import by.scoring.model.entity.Answers;
+import by.scoring.model.repository.QuestionsRepository;
 import by.scoring.model.entity.CategoryQuestion;
 import by.scoring.model.entity.Questions;
 import by.scoring.model.service.IQuestionsService;
@@ -14,25 +13,28 @@ import java.util.List;
 public class QuestionsServiceImpl implements IQuestionsService {
 
     @Autowired
-    private QuestionsDao questionsDao;
+    private QuestionsRepository questionsRepository;
     @Override
-    public void addQuestions(Questions questions) {questionsDao.save(questions);}
+    public void addQuestions(Questions questions) {
+        questionsRepository.save(questions);}
 
     @Override
-    public void updateQuestions(Questions questions) {questionsDao.save(questions);}
+    public void updateQuestions(Questions questions) {
+        questionsRepository.save(questions);}
 
     @Override
-    public void removeQuestions(long id) {questionsDao.delete(id);}
+    public void removeQuestions(long id) {
+        questionsRepository.delete(id);}
 
     @Override
-    public Questions getQuestionsById(long id) {return questionsDao.findOne(id);}
+    public Questions getQuestionsById(long id) {return questionsRepository.findOne(id);}
 
     @Override
-    public List<Questions> listQuestions() {return questionsDao.findAll();}
+    public List<Questions> listQuestions() {return questionsRepository.findAll();}
 
     @Override
-    public Questions findByQuestion(String question) {return questionsDao.findByQuestion(question);}
+    public Questions findByQuestion(String question) {return questionsRepository.findByQuestion(question);}
 
     @Override
-    public List<Questions> findByCategoryQuestion(CategoryQuestion cq) {return questionsDao.findByCategoryQuestion(cq);}
+    public List<Questions> findByCategoryQuestion(CategoryQuestion cq) {return questionsRepository.findByCategoryQuestion(cq);}
 }

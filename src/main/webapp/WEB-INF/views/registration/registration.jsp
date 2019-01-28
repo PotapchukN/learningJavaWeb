@@ -37,7 +37,7 @@
 
 <body>
 
-<div class="card newdone">
+<div class="card flex-space-evenly">
     <form:form method="POST"
                modelAttribute="userForm">
         <h3 class="form-signin-heading w">Создать аккаунт</h3>

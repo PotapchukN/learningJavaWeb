@@ -1,7 +1,6 @@
 package by.scoring.model.service.impl;
 
-import by.scoring.model.dao.UserMoneyDao;
-import by.scoring.model.entity.Answers;
+import by.scoring.model.repository.UserMoneyRepository;
 import by.scoring.model.entity.User;
 import by.scoring.model.entity.UserMoney;
 import by.scoring.model.service.IUserMoneyService;
@@ -14,28 +13,31 @@ import java.util.List;
 public class UserMoneyServiceImpl implements IUserMoneyService {
 
     @Autowired
-    private UserMoneyDao userMoneyDao;
+    private UserMoneyRepository userMoneyRepository;
     @Override
-    public void addUserMoney(UserMoney userMoney) {userMoneyDao.save(userMoney);}
+    public void addUserMoney(UserMoney userMoney) {
+        userMoneyRepository.save(userMoney);}
 
     @Override
-    public void updateUserMoney(UserMoney userMoney) {userMoneyDao.save(userMoney);}
+    public void updateUserMoney(UserMoney userMoney) {
+        userMoneyRepository.save(userMoney);}
 
     @Override
-    public void removeUserMoney(long id) {userMoneyDao.delete(id);}
+    public void removeUserMoney(long id) {
+        userMoneyRepository.delete(id);}
 
     @Override
-    public UserMoney getUserMoneyById(long id) {return userMoneyDao.findOne(id);}
+    public UserMoney getUserMoneyById(long id) {return userMoneyRepository.findOne(id);}
 
     @Override
-    public List<UserMoney> listUserMoney() {return userMoneyDao.findAll();}
+    public List<UserMoney> listUserMoney() {return userMoneyRepository.findAll();}
 
     @Override
-    public UserMoney findByConsumption(float consumption) {return userMoneyDao.findByConsumption(consumption);}
+    public UserMoney findByConsumption(float consumption) {return userMoneyRepository.findByConsumption(consumption);}
 
     @Override
-    public UserMoney findByIncome(float income) {return userMoneyDao.findByIncome(income);}
+    public UserMoney findByIncome(float income) {return userMoneyRepository.findByIncome(income);}
 
     @Override
-    public UserMoney findByUser(User user){return userMoneyDao.findByUser(user);}
+    public UserMoney findByUser(User user){return userMoneyRepository.findByUser(user);}
 }

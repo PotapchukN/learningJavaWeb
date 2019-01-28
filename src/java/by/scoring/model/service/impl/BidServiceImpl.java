@@ -1,6 +1,6 @@
 package by.scoring.model.service.impl;
 
-import by.scoring.model.dao.BidDao;
+import by.scoring.model.repository.BidRepository;
 import by.scoring.model.entity.Bid;
 import by.scoring.model.entity.CreditInfo;
 import by.scoring.model.entity.User;
@@ -8,7 +8,6 @@ import by.scoring.model.service.IBidsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
 
@@ -16,34 +15,37 @@ import java.util.List;
 public class BidServiceImpl implements IBidsService {
 
     @Autowired
-    BidDao bidDao;
+    BidRepository bidRepository;
 
     @Override
-    public void addBid(Bid bid) {bidDao.save(bid);}
+    public void addBid(Bid bid) {
+        bidRepository.save(bid);}
 
     @Override
-    public void updateBid(Bid bid) {bidDao.save(bid);}
+    public void updateBid(Bid bid) {
+        bidRepository.save(bid);}
 
     @Override
-    public void removeBid(long id) {bidDao.delete(id);}
+    public void removeBid(long id) {
+        bidRepository.delete(id);}
 
     @Override
-    public Bid getBidById(long id) {return bidDao.getOne(id);}
+    public Bid getBidById(long id) {return bidRepository.getOne(id);}
 
     @Override
-    public List<Bid> listBids() {return bidDao.findAll();}
+    public List<Bid> listBids() {return bidRepository.findAll();}
 
     @Override
-    public List<Bid> findByCredit(CreditInfo credit) {return bidDao.findByCredit(credit);}
+    public List<Bid> findByCredit(CreditInfo credit) {return bidRepository.findByCredit(credit);}
 
     @Override
-    public List<Bid> findByUser(User user) {return bidDao.findByUser(user);}
+    public List<Bid> findByUser(User user) {return bidRepository.findByUser(user);}
 
     @Override
-    public List<Bid> findByDate(Date date) {return bidDao.findByDate(date);}
+    public List<Bid> findByDate(Date date) {return bidRepository.findByDate(date);}
 
     @Override
     public List<Bid> findByDateAndTimeAndCredit_id(Date date,String time, Long id) {
-        return bidDao.findByDateAndTimeAndCredit_id(date, time, id);
+        return bidRepository.findByDateAndTimeAndCredit_id(date, time, id);
     }
 }

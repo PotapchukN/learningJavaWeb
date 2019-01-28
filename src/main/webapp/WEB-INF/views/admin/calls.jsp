@@ -63,7 +63,7 @@
                 </div>
             </li>
         </ul>
-            <a class="nav-item mr-2 enter" href="<c:url value='/logout'/>">Выйти</a>
+            <a class="nav-item mr-2 grey-color" href="<c:url value='/logout'/>">Выйти</a>
     </div>
 </nav>
 

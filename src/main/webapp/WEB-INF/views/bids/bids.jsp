@@ -62,7 +62,7 @@
             </li>
         </ul>
         <c:if test="${isLogin}">
-            <a class="nav-item mr-2 enter" href="<c:url value='/logout'/>">Выйти</a>
+            <a class="nav-item mr-2 grey-color" href="<c:url value='/logout'/>">Выйти</a>
         </c:if>
     </div>
 </nav>

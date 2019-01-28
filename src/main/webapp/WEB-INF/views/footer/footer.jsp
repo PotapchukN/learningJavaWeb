@@ -14,24 +14,24 @@
 <body>
 
 
-<div class="card bg-light bor">
-    <div class="card-body flex-row space-bet1 mr-5">
+<div class="card bg-light border-none">
+    <div class="card-body flex-row space-around mr-5">
         <h5 class="card-title course ml-5">Курсы валют:</h5>
-        <div class="flex-row space-bet">
-            <img src="<c:url value="/resources/images/america-flag.png"/>" class="checkmark"/>
-            <span class="dark">USD</span>
+        <div class="flex-row space-between">
+            <img src="<c:url value="/resources/images/america-flag.png"/>" class="size-icon"/>
+            <span class="color-currencies">USD</span>
             <p class="mr-3">2,12</p>
             <p>2,163</p>
         </div>
-        <div class="flex-row space-bet">
-            <img src="<c:url value="/resources/images/flag-es.png"/>" class="checkmark"/>
-            <span class="dark">EUR</span>
+        <div class="flex-row space-between">
+            <img src="<c:url value="/resources/images/flag-es.png"/>" class="size-icon"/>
+            <span class="color-currencies">EUR</span>
             <p class="mr-3">2,408</p>
             <p>2,468</p>
         </div>
-        <div class="flex-row space-bet">
-            <img src="<c:url value="/resources/images/flagRuss.png"/>" class="checkmark"/>
-            <span class="dark">RUS</span>
+        <div class="flex-row space-between">
+            <img src="<c:url value="/resources/images/flagRuss.png"/>" class="size-icon"/>
+            <span class="color-currencies">RUS</span>
             <p class="mr-3">3,01</p>
             <p>3,2</p>
         </div>
@@ -41,37 +41,37 @@
 
 
 <%---------------------------Паддинг---------------------------%>
-<div class="card text-white bg-dark bor">
-    <div class="card-body flex-row mt-4 space-bet">
-        <h5 class="card-title freeCons">Бесплатная<br/>консультация 24/7</h5>
+<div class="card text-white bg-dark border-none">
+    <div class="card-body flex-row mt-4 space-between">
+        <h5 class="card-title light-grey-color">Бесплатная<br/>консультация 24/7</h5>
         <div class="flex">
             <div class="flex-row">
-                <img src="<c:url value="/resources/images/phone.png"/>" class="checkmark2"/>
+                <img src="<c:url value="/resources/images/phone.png"/>" class="bigger-size-icon"/>
                 <span>198</span>
             </div>
-            <p class="freeCons smallText ">Стационарный номер <br/>для физических лиц</p>
+            <p class="light-grey-color smallText ">Стационарный номер <br/>для физических лиц</p>
         </div>
         <div class="flex">
             <div class="flex-row">
-                <img src="<c:url value="/resources/images/smartphone.png"/>" class="checkmark2"/>
+                <img src="<c:url value="/resources/images/smartphone.png"/>" class="bigger-size-icon"/>
                 <span>733-32-32</span>
             </div>
-            <p class="freeCons smallText">МТС, Velcome, Life:)<br/>(физические лица)</p>
+            <p class="light-grey-color smallText">МТС, Velcome, Life:)<br/>(физические лица)</p>
         </div>
         <div class="flex">
             <div class="flex-row">
-                <img src="<c:url value="/resources/images/phone.png"/>" class="checkmark2"/>
+                <img src="<c:url value="/resources/images/phone.png"/>" class="bigger-size-icon"/>
                 <span>7464</span>
             </div>
-            <p class="freeCons smallText">Мобильный номер<br/>для юридических лиц</p>
+            <p class="light-grey-color smallText">Мобильный номер<br/>для юридических лиц</p>
         </div>
         <c:if test="${!isAdmin}">
-            <button type="button" class="btn btn-outline-light wid" data-toggle="modal" data-target="#exampleModalCenter">Заказать звонок</button>
+            <button type="button" class="btn btn-outline-light size-btn" data-toggle="modal" data-target="#exampleModalCenter">Заказать звонок</button>
         </c:if>
 
         <c:if test="${isAdmin}">
             <form action="<c:url value="/calls/all"/>" method="post">
-                <button type="submit" id ="43" class="btn btn-outline-light wid" >Просмотреть заказы звонков</button>
+                <button type="submit" id ="43" class="btn btn-outline-light size-btn" >Просмотреть заказы звонков</button>
             </form>
         </c:if>
 

@@ -1,7 +1,7 @@
 package by.scoring.model.service.impl;
 
 import by.scoring.mail.Sender;
-import by.scoring.model.dao.UserDao;
+import by.scoring.model.repository.UserRepository;
 import by.scoring.model.entity.User;
 import by.scoring.model.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ public class UserServiceImpl implements IUserService {
     private final static String HOST = "http://localhost:8080/";
 
     @Autowired
-    private UserDao userDao;
+    private UserRepository userRepository;
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -24,8 +24,8 @@ public class UserServiceImpl implements IUserService {
         user.setRole("ROLE_USER");
         user.setConfirm("N");
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        userDao.save(user);
-        user = userDao.findByEmail(user.getEmail());
+        userRepository.save(user);
+        user = userRepository.findByEmail(user.getEmail());
         Sender sender = new Sender("confirm.accont2@gmail.com", "12345678c");
         String subject = "Подтвердите ваш аккаунт";
         String link = HOST + "confirm/" + user.getId();
@@ -37,14 +37,14 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public void confirm(long id) {
-        User user = userDao.getOne(id);
+        User user = userRepository.getOne(id);
         user.setConfirm("Y");
-        userDao.save(user);
+        userRepository.save(user);
     }
 
     @Override
     public User findByEmail(String email) {
-        return userDao.findByEmail(email);
+        return userRepository.findByEmail(email);
     }
 
     @Override
@@ -63,7 +63,7 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public User findById(long id) {
-        return userDao.getOne(id);
+        return userRepository.getOne(id);
     }
 }
 

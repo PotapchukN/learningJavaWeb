@@ -83,10 +83,10 @@
             </li>
         </ul>
         <c:if test="${!isLogin}">
-            <a class="nav-item mr-2 enter" href="<c:url value='/login'/>">Вход</a>
+            <a class="nav-item mr-2 grey-color" href="<c:url value='/login'/>">Вход</a>
         </c:if>
         <c:if test="${isLogin}">
-            <a class="nav-item mr-2 enter" href="<c:url value='/logout'/>">Выйти</a>
+            <a class="nav-item mr-2 grey-color" href="<c:url value='/logout'/>">Выйти</a>
         </c:if>
 
     </div>
@@ -101,84 +101,84 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block img-fluid" src="<c:url value="/resources/images/imm.jpg"/>" alt="Первый слайд">
+            <img class="display-block img-fluid" src="<c:url value="/resources/images/imm.jpg"/>" alt="Первый слайд">
             <div class="carousel-caption d-none d-md-block">
                 <h3>Потребительский кредит</h3>
-                <div class="card bor bk-trans">
-                    <div class="card-body flex-row mt-4 space-bet">
+                <div class="card border-none bk-trans">
+                    <div class="card-body flex-row mt-4 space-between">
                         <div class="flex">
                             <div class="flex-row">
                                 <span class=" col-black">Низкий</span>
                             </div>
-                            <p class="freeCons smallText  col-black">Ежемесячный платеж</p>
+                            <p class="light-grey-color smallText  col-black">Ежемесячный платеж</p>
                         </div>
                         <div class="flex">
                             <div class="flex-row">
                                 <span class=" col-black">От 24 до 72 месяцев </span>
                             </div>
-                            <p class="freeCons smallText  col-black">срок кредита</p>
+                            <p class="light-grey-color smallText  col-black">срок кредита</p>
                         </div>
                         <div class="flex">
                             <div class="flex-row">
                                 <span class=" col-black">До 10 000 рублей</span>
                             </div>
-                            <p class="freeCons smallText  col-black">наличными</p>
+                            <p class="light-grey-color smallText  col-black">наличными</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block img-fluid" src="<c:url value="/resources/images/oi.jpg"/>" alt="Второй слайд">
+            <img class="display-block img-fluid" src="<c:url value="/resources/images/oi.jpg"/>" alt="Второй слайд">
             <div class="carousel-caption d-none d-md-block">
                 <h3>Ипотека</h3>
-                <div class="card bor bk-trans">
-                    <div class="card-body flex-row mt-4 space-bet">
+                <div class="card border-none bk-trans">
+                    <div class="card-body flex-row mt-4 space-between">
                         <div class="flex col-black">
                             <div class="flex-row">
                                 <span class="col-black">Легко</span>
                             </div>
-                            <p class="freeCons smallText  col-black">без залога</p>
+                            <p class="light-grey-color smallText  col-black">без залога</p>
                         </div>
                         <div class="flex col-black">
                             <div class="flex-row">
                                 <span class=" col-black">Быстро </span>
                             </div>
-                            <p class="freeCons smallText  col-black">оформим за час </p>
+                            <p class="light-grey-color smallText  col-black">оформим за час </p>
                         </div>
                         <div class="flex col-black">
                             <div class="flex-row">
                                 <span class=" col-black">До 40 000 рублей</span>
                             </div>
-                            <p class="freeCons smallText col-black">сумма кредита</p>
+                            <p class="light-grey-color smallText col-black">сумма кредита</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block img-fluid" src="<c:url value="/resources/images/phone.jpg"/>" alt="Третий слайд">
+            <img class="display-block img-fluid" src="<c:url value="/resources/images/phone.jpg"/>" alt="Третий слайд">
             <div class="carousel-caption d-none d-md-block">
                 <h3>Кредит на автомобиль</h3>
-                <div class="card bor bk-trans">
-                    <div class="card-body flex-row mt-4 space-bet">
+                <div class="card border-none bk-trans">
+                    <div class="card-body flex-row mt-4 space-between">
                         <div class="flex">
                             <div class="flex-row col-black">
                                 <span class=" col-black">Любое авто</span>
                             </div>
-                            <p class="freeCons smallText  col-black">на Ваш выбор</p>
+                            <p class="light-grey-color smallText  col-black">на Ваш выбор</p>
                         </div>
                         <div class="flexcol-black">
                             <div class="flex-row ">
                                 <span class=" col-black">Доступно</span>
                             </div>
-                            <p class="freeCons smallText  col-black">без лишних документов</p>
+                            <p class="light-grey-color smallText  col-black">без лишних документов</p>
                         </div>
                         <div class="flex col-black">
                             <div class="flex-row ">
                                 <span class=" col-black">До 40 000 рублей</span>
                             </div>
-                            <p class="freeCons smallText  col-black">сумма кредита</p>
+                            <p class="light-grey-color smallText  col-black">сумма кредита</p>
                         </div>
                     </div>
                 </div>
@@ -195,17 +195,17 @@
     </a>
 </div>
 
-<div class="row">
+<div class="margin-for-cards-on-main-page">
     <div class="col-sm-6">
-        <div class="card wid">
+        <div class="card size-btn">
             <img class="card-img-top" src="<c:url value="/resources/images/cash.jpg"/>" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title center">Кредит наличными</h5>
+                <h5 class="card-title ml-for-cardTitle">Кредит наличными</h5>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="checkmark">Низкий ежемесячный платеж</li>
-                <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="checkmark">До 72 месяцев</li>
-                <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="checkmark">До 40 000 рублей</li>
+                <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="size-icon">Низкий ежемесячный платеж</li>
+                <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="size-icon">До 72 месяцев</li>
+                <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="size-icon">До 40 000 рублей</li>
             </ul>
             <div class="card-body">
                 <a href="#" class="btn btn-dark">Подробнее...</a>
@@ -214,15 +214,15 @@
     </div>
 
     <div class="col-sm-6">
-        <div class="card wid">
+        <div class="card size-bbtn">
             <img class="card-img-top" src="<c:url value="/resources/images/main.jpg"/>" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title center">Кредит народный</h5>
+                <h5 class="card-title ml-for-cardTitle">Кредит народный</h5>
             </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="checkmark">На товары белорусского производства</li>
-                    <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="checkmark">Ставка 20% годовых</li>
-                    <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="checkmark">До 5 000 рублей</li>
+                    <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="size-icon">На товары белорусского производства</li>
+                    <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="size-icon">Ставка 20% годовых</li>
+                    <li class="list-group-item"><img src="<c:url value="/resources/images/checkmark.png"/>" class="size-icon">До 5 000 рублей</li>
                 </ul>
             <div class="card-body">
                 <a href="#" class="btn btn-dark">Подробнее...</a>

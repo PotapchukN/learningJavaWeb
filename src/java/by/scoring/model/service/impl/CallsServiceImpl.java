@@ -1,6 +1,6 @@
 package by.scoring.model.service.impl;
 
-import by.scoring.model.dao.CallsDao;
+import by.scoring.model.repository.CallsRepository;
 import by.scoring.model.entity.Calls;
 import by.scoring.model.service.ICallService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,23 +12,26 @@ import java.util.List;
 public class CallsServiceImpl implements ICallService{
 
     @Autowired
-    CallsDao callsDao;
+    CallsRepository callsRepository;
 
     @Override
-    public void addCall(Calls call) {callsDao.save(call);}
+    public void addCall(Calls call) {
+        callsRepository.save(call);}
 
     @Override
-    public void updateCall(Calls call) {callsDao.save(call);}
+    public void updateCall(Calls call) {
+        callsRepository.save(call);}
 
     @Override
-    public void removeCall(long id) {callsDao.delete(id);}
+    public void removeCall(long id) {
+        callsRepository.delete(id);}
 
     @Override
-    public Calls getCallById(long id) {return callsDao.findOne(id);}
+    public Calls getCallById(long id) {return callsRepository.findOne(id);}
 
     @Override
-    public List<Calls> listCalls() {return callsDao.findAll();}
+    public List<Calls> listCalls() {return callsRepository.findAll();}
 
     @Override
-    public List<Calls> findAllByTopic(String topic) {return callsDao.findAllByTopic(topic);}
+    public List<Calls> findAllByTopic(String topic) {return callsRepository.findAllByTopic(topic);}
 }

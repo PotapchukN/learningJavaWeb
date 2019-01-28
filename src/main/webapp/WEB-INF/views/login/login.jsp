@@ -37,7 +37,7 @@
 
 <form method="POST" action="${contextPath}/login">
 
-    <div class="card newdone">
+    <div class="card flex-space-evenly">
     <h2 class="w">Вход</h2>
     <div class="form-group w">
         <label for="exampleInputEmail1">Email address</label>
