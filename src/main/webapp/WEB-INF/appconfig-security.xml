@@ -9,12 +9,9 @@
 
     <http auto-config="true" use-expressions="true" create-session="ifRequired" disable-url-rewriting="true">
         <csrf disabled="true"/>
-        <intercept-url pattern="/transports/add" access="hasRole('ROLE_ADMIN')"/>
-        <intercept-url pattern="/remove/*" access="hasRole('ROLE_ADMIN')"/>
-        <intercept-url pattern="/points/add/*" access="hasAnyRole('ROLE_ADMIN')"/>
-        <intercept-url pattern="/paths/add/*" access="hasAnyRole('ROLE_ADMIN')"/>
-
-        <!--<intercept-url pattern="/rate/*" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>-->
+        <intercept-url pattern="/rating/*" access="hasRole('ROLE_USER')"/>
+        <intercept-url pattern="/statistic/*" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/bids/*" access="hasAnyRole('ROLE_USER')"/>
 
 
         <form-login login-page="/login"

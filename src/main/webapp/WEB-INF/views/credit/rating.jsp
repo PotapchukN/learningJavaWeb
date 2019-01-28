@@ -125,28 +125,28 @@
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio1" name="customRadio1" class="custom-control-input sr-only" required value="Меньше 20 и больше 60">
-                        <label class="custom-control-label" for="customRadio1">Младше 20 и старше 60</label>
+                        <input type="radio" id="radio_age_early20" name="age" class="custom-control-input sr-only" required value="Меньше 20 и больше 60">
+                        <label class="custom-control-label" for="radio_age_early20">Младше 20 и старше 60</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio2" name="customRadio1" class="custom-control-input sr-only" required value="От 20 до 25">
-                        <label class="custom-control-label" for="customRadio2">От 20 до 25</label>
+                        <input type="radio" id="radio_age_20-25" name="age" class="custom-control-input sr-only" required value="От 20 до 25">
+                        <label class="custom-control-label" for="radio_age_20-25">От 20 до 25</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio3" name="customRadio1" class="custom-control-input sr-only" required value="От 26 до 30">
-                        <label class="custom-control-label" for="customRadio3">От 26 до 30</label>
+                        <input type="radio" id="radio_age_26-30" name="age" class="custom-control-input sr-only" required value="От 26 до 30">
+                        <label class="custom-control-label" for="radio_age_26-30">От 26 до 30</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio4" name="customRadio1" class="custom-control-input sr-only" required value="От 31 до 35">
-                        <label class="custom-control-label" for="customRadio4">От 31 до 35</label>
+                        <input type="radio" id="radio_age_31-35" name="age" class="custom-control-input sr-only" required value="От 31 до 35">
+                        <label class="custom-control-label" for="radio_age_31-35">От 31 до 35</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio5" name="customRadio1" class="custom-control-input sr-only" required value="От 36 до 50">
-                        <label class="custom-control-label" for="customRadio5">От 36 до 50</label>
+                        <input type="radio" id="radio_age_36-50" name="customRadio1" class="custom-control-input sr-only" required value="От 36 до 50">
+                        <label class="custom-control-label" for="radio_age_36-50">От 36 до 50</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio6" name="customRadio1" class="custom-control-input sr-only" required value="От 51 до 60">
-                        <label class="custom-control-label" for="customRadio6">От 51 до 60</label>
+                        <input type="radio" id="radio_age_51-60" name="age" class="custom-control-input sr-only" required value="От 51 до 60">
+                        <label class="custom-control-label" for="radio_age_51-60">От 51 до 60</label>
                     </div>
                 </div>
             </div>
@@ -162,16 +162,16 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio7" name="customRadio2" class="custom-control-input sr-only" required value="Да">
-                        <label class="custom-control-label" for="customRadio7">Да</label>
+                        <input type="radio" id="radio_citizenship_yes" name="citizenship" class="custom-control-input sr-only" required value="Да">
+                        <label class="custom-control-label" for="radio_citizenship_yes">Да</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio8" name="customRadio2" class="custom-control-input sr-only" required value="Нет">
-                        <label class="custom-control-label" for="customRadio8">Нет</label>
+                        <input type="radio" id="radio_citizenship_no" name="citizenship" class="custom-control-input sr-only" required value="Нет">
+                        <label class="custom-control-label" for="radio_citizenship_no">Нет</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio9" name="customRadio2" class="custom-control-input sr-only" required value="Вид на жительство">
-                        <label class="custom-control-label" for="customRadio9">Вид на жительство</label>
+                        <input type="radio" id="radio_citizenship_residencePermit" name="citizenship" class="custom-control-input sr-only" required value="Вид на жительство">
+                        <label class="custom-control-label" for="radio_citizenship_residencePermit">Вид на жительство</label>
                     </div>
                 </div>
             </div>
@@ -187,12 +187,12 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio10" name="customRadio3" class="custom-control-input sr-only" required value="Да">
-                        <label class="custom-control-label" for="customRadio10">Да</label>
+                        <input type="radio" id="radio_registration_yes" name="registration" class="custom-control-input sr-only" required value="Да">
+                        <label class="custom-control-label" for="radio_registration_yes">Да</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio11" name="customRadio3" class="custom-control-input sr-only" required value="Нет">
-                        <label class="custom-control-label" for="customRadio11">Нет</label>
+                        <input type="radio" id="radio_registration_no" name="registration" class="custom-control-input sr-only" required value="Нет">
+                        <label class="custom-control-label" for="radio_registration_no">Нет</label>
                     </div>
                 </div>
             </div>
@@ -208,16 +208,16 @@
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio12" name="customRadio4" class="custom-control-input sr-only" required value="Собственное жилье">
-                        <label class="custom-control-label" for="customRadio12">Собственное жилье</label>
+                        <input type="radio" id="radio_housing_own" name="housing" class="custom-control-input sr-only" required value="Собственное жилье">
+                        <label class="custom-control-label" for="radio_housing_own">Собственное жилье</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio13" name="customRadio4" class="custom-control-input sr-only" required value="Съемное жилье">
-                        <label class="custom-control-label" for="customRadio13">Съемное жилье</label>
+                        <input type="radio" id="radio_housing_removable" name="housing" class="custom-control-input sr-only" required value="Съемное жилье">
+                        <label class="custom-control-label" for="radio_housing_removable">Съемное жилье</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio14" name="customRadio4" class="custom-control-input sr-only" required value="У родственников">
-                        <label class="custom-control-label" for="customRadio14">У родственников</label>
+                        <input type="radio" id="radio_housing_relatives" name="housing" class="custom-control-input sr-only" required value="У родственников">
+                        <label class="custom-control-label" for="radio_housing_relatives">У родственников</label>
                     </div>
                 </div>
             </div>
@@ -233,20 +233,20 @@
             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio15" name="customRadio5" class="custom-control-input sr-only" required value="Холост/не замужем">
-                        <label class="custom-control-label" for="customRadio15">Холост/не замужем</label>
+                        <input type="radio" id="radio_sp_unmarried" name="sp" class="custom-control-input sr-only" required value="Холост/не замужем">
+                        <label class="custom-control-label" for="radio_sp_unmarried">Холост/не замужем</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio16" name="customRadio5" class="custom-control-input sr-only" required value="Женат/замужем">
-                        <label class="custom-control-label" for="customRadio16">Женат/замужем</label>
+                        <input type="radio" id="radio_sp_married" name="sp" class="custom-control-input sr-only" required value="Женат/замужем">
+                        <label class="custom-control-label" for="radio_sp_married">Женат/замужем</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio17" name="customRadio5" class="custom-control-input sr-only" required value="В разводе">
-                        <label class="custom-control-label" for="customRadio17">В разводе</label>
+                        <input type="radio" id="radio_sp_divorced" name="sp" class="custom-control-input sr-only" required value="В разводе">
+                        <label class="custom-control-label" for="radio_sp_divorced">В разводе</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio18" name="customRadio5" class="custom-control-input sr-only" required value="Вдовец/вдова">
-                        <label class="custom-control-label" for="customRadio18">Вдовец/вдова</label>
+                        <input type="radio" id="radio_sp_widow" name="sp" class="custom-control-input sr-only" required value="Вдовец/вдова">
+                        <label class="custom-control-label" for="radio_sp_widow">Вдовец/вдова</label>
                     </div>
                 </div>
             </div>
@@ -262,20 +262,20 @@
             <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio19" name="customRadio6" class="custom-control-input sr-only" required value="Нет">
-                        <label class="custom-control-label" for="customRadio19">Нет</label>
+                        <input type="radio" id="radio_children_no" name="children" class="custom-control-input sr-only" required value="Нет">
+                        <label class="custom-control-label" for="radio_children_no">Нет</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio20" name="customRadio6" class="custom-control-input sr-only" required value="Один">
-                        <label class="custom-control-label" for="customRadio20">Один</label>
+                        <input type="radio" id="radio_children_one" name="children" class="custom-control-input sr-only" required value="Один">
+                        <label class="custom-control-label" for="radio_children_one">Один</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio21" name="customRadio6" class="custom-control-input sr-only" required value="Два">
-                        <label class="custom-control-label" for="customRadio21">Два</label>
+                        <input type="radio" id="radio_children_two" name="children" class="custom-control-input sr-only" required value="Два">
+                        <label class="custom-control-label" for="radio_children_two">Два</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio22" name="customRadio6" class="custom-control-input sr-only" required value="Три и более">
-                        <label class="custom-control-label" for="customRadio22">Три и более</label>
+                        <input type="radio" id="radio_children_three" name="children" class="custom-control-input sr-only" required value="Три и более">
+                        <label class="custom-control-label" for="radio_children_three">Три и более</label>
                     </div>
                 </div>
             </div>
@@ -291,16 +291,16 @@
             <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio23" name="customRadio7" class="custom-control-input sr-only" required value="Не военнообязанный">
-                        <label class="custom-control-label" for="customRadio23">Не военнообязанный</label>
+                        <input type="radio" id="radio_army_no" name="army" class="custom-control-input sr-only" required value="Не военнообязанный">
+                        <label class="custom-control-label" for="radio_army_no">Не военнообязанный</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio24" name="customRadio7" class="custom-control-input sr-only" required value="Отсрочка">
-                        <label class="custom-control-label" for="customRadio24">Отсрочка</label>
+                        <input type="radio" id="radio_army_delay" name="army" class="custom-control-input sr-only" required value="Отсрочка">
+                        <label class="custom-control-label" for="radio_army_delay">Отсрочка</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio25" name="customRadio7" class="custom-control-input sr-only" required value="Отслужил">
-                        <label class="custom-control-label" for="customRadio25">Отслужил</label>
+                        <input type="radio" id="radio_army_served" name="army" class="custom-control-input sr-only" required value="Отслужил">
+                        <label class="custom-control-label" for="radio_army_served">Отслужил</label>
                     </div>
                 </div>
             </div>
@@ -326,20 +326,20 @@
             <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio26" name="customRadio8" class="custom-control-input sr-only" required value="Среднее">
-                        <label class="custom-control-label" for="customRadio26">Среднее</label>
+                        <input type="radio" id="radio_education_secondaryLevel" name="education" class="custom-control-input sr-only" required value="Среднее">
+                        <label class="custom-control-label" for="radio_education_secondaryLevel">Среднее</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio27" name="customRadio8" class="custom-control-input sr-only" required value="Техническое">
-                        <label class="custom-control-label" for="customRadio27">Техническое</label>
+                        <input type="radio" id="radio_education_technicalBackground" name="education" class="custom-control-input sr-only" required value="Техническое">
+                        <label class="custom-control-label" for="radio_education_technicalBackground">Техническое</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio28" name="customRadio8" class="custom-control-input sr-only" required value="Неоконченное высшее">
-                        <label class="custom-control-label" for="customRadio28">Неоконченное высшее</label>
+                        <input type="radio" id="radio_education_uncompletedHigherEducation" name="education" class="custom-control-input sr-only" required value="Неоконченное высшее">
+                        <label class="custom-control-label" for="radio_education_uncompletedHigherEducation">Неоконченное высшее</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio29" name="customRadio8" class="custom-control-input sr-only" required value="Высшее">
-                        <label class="custom-control-label" for="customRadio29">Высшее</label>
+                        <input type="radio" id="radio_education_higherEducation" name="education" class="custom-control-input sr-only" required value="Высшее">
+                        <label class="custom-control-label" for="radio_education_higherEducation">Высшее</label>
                     </div>
                 </div>
             </div>
@@ -355,20 +355,20 @@
             <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio30" name="customRadio9" class="custom-control-input sr-only" required value="Работник бюджетной структуры">
-                        <label class="custom-control-label" for="customRadio30">Работник бюджетной структуры</label>
+                        <input type="radio" id="radio_employees_in budgetary_institutions" name="kindOfActivity" class="custom-control-input sr-only" required value="Работник бюджетной структуры">
+                        <label class="custom-control-label" for="radio_employees_in budgetary_institutions">Работник бюджетной структуры</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio31" name="customRadio9" class="custom-control-input sr-only" required value="Сотрудник коммерческой фирмы">
-                        <label class="custom-control-label" for="customRadio31">Сотрудник коммерческой фирмы</label>
+                        <input type="radio" id="radio_employees_in commercial firm" name="kindOfActivity" class="custom-control-input sr-only" required value="Сотрудник коммерческой фирмы">
+                        <label class="custom-control-label" for="radio_employees_in commercial firm">Сотрудник коммерческой фирмы</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio32" name="customRadio9" class="custom-control-input sr-only" required value="Пенсионер">
-                        <label class="custom-control-label" for="customRadio32">Пенсионер</label>
+                        <input type="radio" id="radio_kindOfActivity_pensioner" name="kindOfActivity" class="custom-control-input sr-only" required value="Пенсионер">
+                        <label class="custom-control-label" for="radio_kindOfActivity_pensioner">Пенсионер</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio33" name="customRadio9" class="custom-control-input sr-only" required value="Иное">
-                        <label class="custom-control-label" for="customRadio33">Иное(ИП)</label>
+                        <input type="radio" id="radio_kindOfActivity_otherwise" name="kindOfActivity" class="custom-control-input sr-only" required value="Иное">
+                        <label class="custom-control-label" for="radio_kindOfActivity_otherwise">Иное(ИП)</label>
                     </div>
                 </div>
             </div>
@@ -384,20 +384,20 @@
             <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio34" name="customRadio10" class="custom-control-input sr-only" required value="Отсутствует">
-                        <label class="custom-control-label" for="customRadio34">Отсутствует</label>
+                        <input type="radio" id="radio_skillLevel_no" name="skillLevel" class="custom-control-input sr-only" required value="Отсутствует">
+                        <label class="custom-control-label" for="radio_skillLevel_no">Отсутствует</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio35" name="customRadio10" class="custom-control-input sr-only" required value="Обслуживающий персонал">
-                        <label class="custom-control-label" for="customRadio35">Обслуживающий персонал</label>
+                        <input type="radio" id="radio_skillLevel_service personnel" name="skillLevel" class="custom-control-input sr-only" required value="Обслуживающий персонал">
+                        <label class="custom-control-label" for="radio_skillLevel_service personnel">Обслуживающий персонал</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio36" name="customRadio10" class="custom-control-input sr-only" required value="Специалисты и служащие">
-                        <label class="custom-control-label" for="customRadio36">Специалисты и служащие</label>
+                        <input type="radio" id="radio_skillLevel_specialist" name="skillLevel" class="custom-control-input sr-only" required value="Специалисты и служащие">
+                        <label class="custom-control-label" for="radio_skillLevel_specialist">Специалисты и служащие</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio37" name="customRadio10" class="custom-control-input sr-only" required value="Руководитель">
-                        <label class="custom-control-label" for="customRadio37">Руководитель</label>
+                        <input type="radio" id="radio_skillLevel_head" name="skillLevel" class="custom-control-input sr-only" required value="Руководитель">
+                        <label class="custom-control-label" for="radio_skillLevel_head">Руководитель</label>
                     </div>
                 </div>
             </div>
@@ -413,20 +413,20 @@
             <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio38" name="customRadio11" class="custom-control-input sr-only" required value="Отсутствует">
-                        <label class="custom-control-label" for="customRadio38">Отсутствует</label>
+                        <input type="radio" id="radio_seniority_no" name="experience" class="custom-control-input sr-only" required value="Отсутствует">
+                        <label class="custom-control-label" for="radio_seniority_no">Отсутствует</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio39" name="customRadio11" class="custom-control-input sr-only" required value="До 2 лет">
-                        <label class="custom-control-label" for="customRadio39">До 2 лет</label>
+                        <input type="radio" id="radio_seniority_2years" name="experience" class="custom-control-input sr-only" required value="До 2 лет">
+                        <label class="custom-control-label" for="radio_seniority_2years">До 2 лет</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio40" name="customRadio11" class="custom-control-input sr-only" required value="До 5 лет">
-                        <label class="custom-control-label" for="customRadio40">До 5 лет</label>
+                        <input type="radio" id="radio_seniority_5years" name="experience" class="custom-control-input sr-only" required value="До 5 лет">
+                        <label class="custom-control-label" for="radio_seniority_5years">До 5 лет</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio41" name="customRadio11" class="custom-control-input sr-only" required value="Более 5 лет">
-                        <label class="custom-control-label" for="customRadio41">Более 5 лет</label>
+                        <input type="radio" id="radio_seniority_more5years" name="experience" class="custom-control-input sr-only" required value="Более 5 лет">
+                        <label class="custom-control-label" for="radio_seniority_more5years">Более 5 лет</label>
                     </div>
                 </div>
             </div>
@@ -452,12 +452,12 @@
             <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio42" name="customRadio12" class="custom-control-input sr-only" required value="Да">
-                        <label class="custom-control-label" for="customRadio42">Да</label>
+                        <input type="radio" id="radio_credit_yes" name="credit" class="custom-control-input sr-only" required value="Да">
+                        <label class="custom-control-label" for="radio_credit_yes">Да</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio43" name="customRadio12" class="custom-control-input sr-only" required value="Нет">
-                        <label class="custom-control-label" for="customRadio43">Нет</label>
+                        <input type="radio" id="radio_credit_no" name="credit" class="custom-control-input sr-only" required value="Нет">
+                        <label class="custom-control-label" for="radio_credit_no">Нет</label>
                     </div>
                 </div>
             </div>
@@ -493,12 +493,12 @@
             <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio44" name="customRadio14" class="custom-control-input sr-only" required value="Да">
-                        <label class="custom-control-label" for="customRadio44">Да</label>
+                        <input type="radio" id="radio_clientOurBank_yes" name="clientOurBank" class="custom-control-input sr-only" required value="Да">
+                        <label class="custom-control-label" for="radio_clientOurBank_yes">Да</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio45" name="customRadio14" class="custom-control-input sr-only" required value="Нет">
-                        <label class="custom-control-label" for="customRadio45">Нет</label>
+                        <input type="radio" id="radio_clientOurBank_no" name="clientOurBank" class="custom-control-input sr-only" required value="Нет">
+                        <label class="custom-control-label" for="radio_clientOurBank_no">Нет</label>
                     </div>
                 </div>
             </div>
@@ -615,12 +615,12 @@
             <div id="collapseNineteen" class="collapse" aria-labelledby="headingNineteen" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio46" name="customRadio19" class="custom-control-input sr-only" required value="Да">
-                        <label class="custom-control-label" for="customRadio46">Да</label>
+                        <input type="radio" id="radio_flat_yes" name="flat" class="custom-control-input sr-only" required value="Да">
+                        <label class="custom-control-label" for="radio_flat_yes">Да</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio47" name="customRadio19" class="custom-control-input sr-only" required value="Нет">
-                        <label class="custom-control-label" for="customRadio47">Нет</label>
+                        <input type="radio" id="radio_flat_no" name="flat" class="custom-control-input sr-only" required value="Нет">
+                        <label class="custom-control-label" for="radio_flat_no">Нет</label>
                     </div>
                 </div>
             </div>
@@ -636,12 +636,12 @@
             <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent="#accordion">
                 <div class="card-body">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio48" name="customRadio20" class="custom-control-input sr-only" required value="Да">
-                        <label class="custom-control-label" for="customRadio48">Да</label>
+                        <input type="radio" id="radio_car_yes" name="car" class="custom-control-input sr-only" required value="Да">
+                        <label class="custom-control-label" for="radio_car_yes">Да</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio49" name="customRadio20" class="custom-control-input sr-only" required value="Нет">
-                        <label class="custom-control-label" for="customRadio49">Нет</label>
+                        <input type="radio" id="radio_car_no" name="car" class="custom-control-input sr-only" required value="Нет">
+                        <label class="custom-control-label" for="radio_car_no">Нет</label>
                     </div>
                 </div>
             </div>

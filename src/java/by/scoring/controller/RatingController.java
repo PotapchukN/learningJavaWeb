@@ -47,13 +47,13 @@ public class RatingController {
     //    Обработка личной информации
     @RequestMapping(value = "/rating/general-info", method = RequestMethod.POST)
     public String listGeneralInfo(Model model,
-                                  @RequestParam("customRadio1") String age,
-                                  @RequestParam("customRadio2") String citizenship,
-                                  @RequestParam("customRadio3") String registration,
-                                  @RequestParam("customRadio4") String housing,
-                                  @RequestParam("customRadio5") String sp,
-                                  @RequestParam("customRadio6") String children,
-                                  @RequestParam("customRadio7") String army) {
+                                  @RequestParam("age") String age,
+                                  @RequestParam("citizenship") String citizenship,
+                                  @RequestParam("registration") String registration,
+                                  @RequestParam("housing") String housing,
+                                  @RequestParam("sp") String sp,
+                                  @RequestParam("children") String children,
+                                  @RequestParam("army") String army) {
 
 
         UserAnswers userAnswers = new UserAnswers();
@@ -134,10 +134,10 @@ public class RatingController {
     //    Обработка информации о работе и образовании
     @RequestMapping(value = "/rating/job-info", method = RequestMethod.POST)
     public String listJobInfo(Model model,
-                                  @RequestParam(value="customRadio8", required=false) String education,
-                                  @RequestParam(value="customRadio9", required=false) String kindOfActivity,
-                                  @RequestParam(value="customRadio10", required=false) String skillLevel,
-                                  @RequestParam(value="customRadio11", required=false) String experience) {
+                                  @RequestParam("education") String education,
+                                  @RequestParam("kindOfActivity") String kindOfActivity,
+                                  @RequestParam("skillLevel") String skillLevel,
+                                  @RequestParam("experience") String experience) {
 
 
         UserAnswers userAnswers = new UserAnswers();
@@ -191,9 +191,9 @@ public class RatingController {
     //    Обработка информации о работе и образовании
     @RequestMapping(value = "/rating/credit-info", method = RequestMethod.POST)
     public String listCreditInfo(Model model,
-                              @RequestParam(value="customRadio12", required=false) String credit,
-                              @RequestParam(value="loan_payments", required=false) Float summOfCredit,
-                              @RequestParam(value="customRadio14", required=false) String clientOurBank) {
+                              @RequestParam("credit") String credit,
+                              @RequestParam("loan_payments") Float summOfCredit,
+                              @RequestParam("clientOurBank") String clientOurBank) {
 
 
         UserAnswers userAnswers = new UserAnswers();
@@ -230,10 +230,10 @@ public class RatingController {
     //    Обработка информации о доходах и расходах
     @RequestMapping(value = "/rating/income-info", method = RequestMethod.POST)
     public String listIncomeInfo(Model model,
-                                 @RequestParam(value="general_income", required=false) Float general_income,
-                                 @RequestParam(value="communal_payments", required=false) Float communal_payments,
-                                 @RequestParam(value="rent_house", required=false) Float  rent_house,
-                                 @RequestParam(value="additional_payments", required=false) Float additional_payments) {
+                                 @RequestParam("general_income") Float general_income,
+                                 @RequestParam("communal_payments") Float communal_payments,
+                                 @RequestParam("rent_house") Float  rent_house,
+                                 @RequestParam("additional_payments") Float additional_payments) {
 
         UserMoney userMoney = userMoneyService.findByUser(userService.getCurrentUser());
         Float allConsumption = userMoney.getConsumption() +
@@ -256,8 +256,8 @@ public class RatingController {
     //    Обработка информации об имуществе
     @RequestMapping(value = "/rating/holding-info", method = RequestMethod.POST)
     public String listHoldingInfo(Model model,
-                                 @RequestParam("customRadio19") String flat,
-                                 @RequestParam("customRadio20") String car) {
+                                 @RequestParam("flat") String flat,
+                                 @RequestParam("car") String car) {
 
         UserAnswers userAnswers = new UserAnswers();
         userAnswers.setUser(userService.getCurrentUser());
